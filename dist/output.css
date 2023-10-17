@@ -1217,10 +1217,6 @@ select {
   margin-top: 2rem;
 }
 
-.ml-4 {
-  margin-left: 1rem;
-}
-
 .box-border {
   box-sizing: border-box;
 }
@@ -1504,12 +1500,20 @@ select {
   min-width: 100%;
 }
 
+.max-w-2xl {
+  max-width: 42rem;
+}
+
 .max-w-4xl {
   max-width: 56rem;
 }
 
 .max-w-\[18rem\] {
   max-width: 18rem;
+}
+
+.max-w-lg {
+  max-width: 32rem;
 }
 
 .max-w-md {
@@ -2909,6 +2913,11 @@ select {
   padding-right: 2rem;
 }
 
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -2947,11 +2956,6 @@ select {
 .py-\[\.5rem\] {
   padding-top: .5rem;
   padding-bottom: .5rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .pl-10 {
@@ -3993,6 +3997,23 @@ body {
   --tw-bg-opacity: 1;
   background-color: rgb(250 250 250 / var(--tw-bg-opacity));
   font-weight: 600;
+}
+
+.multipart-indicator {
+  border-bottom: 2px solid transparent;
+}
+
+.multipart-indicator.active {
+  border-bottom: 4px solid #00cc83;
+  font-weight: bold;
+}
+
+.multipart-form {
+  display: none;
+}
+
+.multipart-form.active {
+  display: block;
 }
 
 /* Sidebar Styles  End*/
