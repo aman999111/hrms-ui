@@ -203,6 +203,13 @@ body {
     @apply block max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-sm p-2;
 }
 
+.login-input {
+    @apply py-3 xl:py-4 2xl:py-5 px-4 pl-10 2xl:pl-14 block w-full border-gray-200 shadow-sm rounded-md text-sm md:text-base 2xl:text-xl focus:z-10 focus:border-[#00cc83] focus:ring-[#00cc83] placeholder:text-gray-300;
+}
+.login-input.is-invalid {
+    @apply border-red-400;
+}
+
 .project-link:hover {
     background-color: #fafafa;
 }
