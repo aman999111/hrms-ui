@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 300;
+    src: url('../assets/fonts/Gilroy-Light.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 400;
+    src: url('../assets/fonts/Gilroy-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 500;
+    src: url('../assets/fonts/Gilroy-Medium.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 600;
+    src: url('../assets/fonts/Gilroy-Semibold.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 700;
+    src: url('../assets/fonts/Gilroy-Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 800;
+    src: url('../assets/fonts/Gilroy-Extrabold.woff2') format('woff2');
+}
+@font-face {
+    font-family: "Gilroy";
+    font-weight: 900;
+    src: url('../assets/fonts/Gilroy-Black.woff2') format('woff2');
+}
+
+body {
+    font-family: "Gilroy", sans-serif;
+    /* background-image: url('../assets/images/testing.png'); */
+    /* background-size: 100% auto; */
+}
+
+.form-wrapper {
+    background-image: url('../assets/images/form-wrapper-bg.webp');
+    background-position: bottom;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.password-toggle .show-password {
+    display: block;
+}
+
+.password-toggle .hide-password {
+    display: none;
+}
+
+.password-toggle.shown .show-password {
+    display: none;
+}
+
+.password-toggle.shown .hide-password {
+    display: block;
+}
+
+.image-wrapper:nth-child(1) img {
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+    animation: clip1 1s ease-in-out 0s backwards;
+}
+.image-wrapper:nth-child(2) img {
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+    animation: clip2 1s ease-in-out .5s backwards;
+}
+
+@keyframes clip1 {
+    0% {
+        clip-path: polygon(100% 100%, 100% 100%, 100% 0, 100% 0);
+    }
+    
+    100% {
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+}
+@keyframes clip2 {
+    0% {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    
+    100% {
+        clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    }
+}
+
+.login-circle::before {
+    content: "";
+    width: 20%;
+    aspect-ratio: 1;
+    background-color: #00cc83;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+}
+
+/* <!-- 640px   768px 1024px  1280px 1536px--> */
+
+
+/* .login-circle::after {
+    content: "";
+    width: 2rem;
+    height: .25rem;
+    border: 1px solid;
+    background-image: url("./assets/images/arrow.svg");
+    background-size: contain;
+    background-position: center;
+} */
+
+/* Sidebar Styles */
+.menu-item.active {
+    color: white;
+    background-color: #00cc83;
+}
+.menu-item.active span {
+    font-weight: 700;
+}
+.menu-item.active svg {
+    color: white;
+}
+.menu-item svg {
+    color: #8F90A6;
+}
+
+.menu-item:hover {
+    color: white;
+    background-color: #00cc83;
+}
+.menu-item:hover svg {
+    color: white;
+}
+
+.main {
+    @apply pl-[14rem] xl:pl-[17rem] 2xl:pl-[25rem] h-[calc(100vh-3.5rem)] xl:h-[calc(100vh-4rem)] 2xl:h-[calc(100vh-5rem)] mt-14 xl:mt-16 2xl:mt-20;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.status {
+    @apply px-5 py-2 rounded-full inline-block text-xs font-semibold;
+}
+.status.completed {
+    @apply text-emerald-500 bg-emerald-100;
+} 
+.status.approved {
+    @apply text-emerald-500 bg-emerald-100;
+}
+.status.pending {
+    @apply text-amber-500 bg-amber-100;
+}
+.status.hold {
+    @apply text-red-500 bg-red-100;
+}
+.status.rejected {
+    @apply text-red-500 bg-red-100;
+}
+.status.progress {
+    @apply text-purple-500 bg-purple-100;
+}
+.status.overrun {
+    @apply text-blue-500 bg-blue-100;
+}
+.status.onbench {
+    @apply text-orange-500 bg-orange-100;
+}
+.status.deployed {
+    @apply text-amber-500 bg-amber-100;
+}
+
+
+/* @media screen and (max-width: 1280px) {
+    .main {
+        padding-left: 17rem;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .main {
+        padding-left: 14rem;
+    }
+} */
+
+.k-input {
+    @apply py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500;
+}
+
+.k-input.is-invalid {
+    @apply border-red-400 focus:border-red-500 focus:ring-red-500;
+}
+
+.project-link {
+    @apply block max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-sm p-2;
+}
+
+.project-link:hover {
+    background-color: #fafafa;
+}
+
+.project-link.active {
+    @apply bg-[#fafafa] font-semibold;
+}
+
+.multipart-indicator {
+    border-bottom: 2px solid transparent;
+}
+.multipart-indicator.active {
+    border-bottom: 4px solid #00cc83;
+    font-weight: bold;
+}
+
+.multipart-form {
+    display: none;
+}
+.multipart-form.active {
+    display: block;
+}
+
+.switch-view.active {
+    @apply border-emerald-600 text-emerald-600 bg-gray-100;
+}
+
+/* Sidebar Styles  End*/
+
+/* Datatable */
+
+.dataTables_paginate .paginate_button.next,
+.dataTables_paginate .paginate_button.previous {
+  @apply py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-[#00CC83] transition-all text-sm cursor-pointer;
+}
+.dataTables_length {
+    @apply float-left pl-3 pt-3 flex gap-2 items-center text-black text-sm mb-3;
+}
+.dataTables_filter {
+    @apply float-left sm:float-right pl-3 sm:pl-0 sm:pr-3 pt-3 mb-3;
+}
+.dataTables_filter label {
+    @apply flex gap-2 items-center text-black text-sm;
+}
+.paginate_button {
+    @apply text-black ;
+}
+.paginate_button.current {
+    @apply bg-[#00CC83] text-white rounded px-2 py-1;
+}
+.dataTables_info {
+    @apply text-black px-5 border-t pt-2 text-sm;
+}
+.dataTables_paginate {
+    @apply flex justify-end items-center p-4 gap-2;
+}
+.dataTables_paginate span {
+    @apply flex items-center gap-3;
+}
+.dataTables_filter input {
+    @apply py-2 px-3 inline-block w-auto border-gray-200 rounded-md text-sm focus:border-[#00CC83] focus:ring-[#00CC83];
+}
+.dataTables_length select {
+    @apply py-2 px-3 pr-9 inline-block w-auto border-gray-200 rounded-md text-sm focus:border-[#00CC83] focus:ring-[#00CC83];
+}
+.dataTables_empty {
+    @apply text-center text-black;
+}
+
+/* Datatable */

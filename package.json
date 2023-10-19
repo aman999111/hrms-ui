@@ -1,0 +1,17 @@
+{
+  "name": "hrms-ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "watchCss": "npx tailwindcss -i ./style.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.6",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "@angular/cli": "^16.2.4",
+    "preline": "^1.9.0"
+  }
+}
