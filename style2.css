@@ -52,3 +52,11 @@
         display: inline-flex;
     }
 }
+
+.dh-checklist-fill textarea {
+    display: none !important ;
+}
+
+.dh-checklist-fill:has(input:checked) textarea {
+    display: block !important;
+}

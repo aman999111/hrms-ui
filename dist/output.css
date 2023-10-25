@@ -1585,6 +1585,10 @@ select {
   min-width: 100%;
 }
 
+.min-w-\[10rem\] {
+  min-width: 10rem;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -4550,6 +4554,62 @@ body {
   }
 }
 
+.sidebar.shrinked .logo_text {
+  display: none;
+}
+
+.sidebar.shrinked .menu-item-text {
+  display: none;
+}
+
+.sidebar.shrinked {
+  width: 5rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.sidebar.shrinked .menu-item {
+  justify-content: center;
+}
+
+.sidebar.shrinked .logo {
+  justify-content: center;
+}
+
+.sidebar.shrinked + .header {
+  width: calc(100vw - 5rem);
+}
+
+:has(.sidebar.shrinked) .main {
+  padding-left: 6rem;
+}
+
+.open-mobile-sidebar {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .sidebar {
+    display: none;
+  }
+
+  .header {
+    width: 100vw !important;
+  }
+
+  .main {
+    padding-left: 1rem !important;
+  }
+
+  .sidebar-toggle {
+    display: none;
+  }
+
+  .open-mobile-sidebar {
+    display: inline-flex;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -4616,6 +4676,10 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.hover\:border:hover {
+  border-width: 1px;
+}
+
 .hover\:border-black:hover {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -4629,6 +4693,11 @@ body {
 .hover\:border-gray-100:hover {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
+}
+
+.hover\:border-gray-200:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
 .hover\:bg-\[\#00cc83\]:hover {
@@ -5165,6 +5234,26 @@ body {
   .dark\:text-gray-400 {
     --tw-text-opacity: 1;
     color: rgb(156 163 175 / var(--tw-text-opacity));
+  }
+
+  .dark\:checked\:border-blue-500:checked {
+    --tw-border-opacity: 1;
+    border-color: rgb(59 130 246 / var(--tw-border-opacity));
+  }
+
+  .dark\:checked\:border-emerald-500:checked {
+    --tw-border-opacity: 1;
+    border-color: rgb(16 185 129 / var(--tw-border-opacity));
+  }
+
+  .dark\:checked\:bg-blue-500:checked {
+    --tw-bg-opacity: 1;
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+  }
+
+  .dark\:checked\:bg-emerald-500:checked {
+    --tw-bg-opacity: 1;
+    background-color: rgb(16 185 129 / var(--tw-bg-opacity));
   }
 
   .dark\:hover\:bg-gray-600:hover {

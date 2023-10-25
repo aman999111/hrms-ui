@@ -386,7 +386,7 @@
                                                     Details</a>
                                             </td>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                                <button type="button"
+                                                <!-- <button type="button"
                                                     class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
                                                     href="#">
                                                     <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
@@ -399,7 +399,30 @@
                                                                 d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
                                                         </g>
                                                     </svg>
-                                                </button>
+                                                </button> -->
+                                                <div class="hs-dropdown relative inline-flex">
+                                                    <button id="hs-dropdown-default" type="button"
+                                                        class="hs-dropdown-toggle py-1 px-2 inline-flex justify-center items-center gap-2 border border-transparent rounded-md font-medium text-gray-700 shadow-sm align-middle hover:bg-gray-50 hover:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-emerald-600 transition-all text-sm">
+                                                        <!-- <svg class="hs-dropdown-open:rotate-180 w-2.5 h-2.5 text-gray-600" width="16"
+                                                            height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
+                                                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                                        </svg> -->
+                                                        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g fill="currentColor"><circle cx="10" cy="15" r="2"/><circle cx="10" cy="10" r="2"/><circle cx="10" cy="5" r="2"/></g></svg>
+                                                    </button>
+                        
+                                                    <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-72 hidden z-30 mt-2 min-w-[10rem] bg-white shadow-md rounded-lg"
+                                                        aria-labelledby="hs-dropdown-default">
+                                                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                                                            href="#">
+                                                            Edit
+                                                        </a>
+                                                        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                                                            href="#">
+                                                            Delete
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
