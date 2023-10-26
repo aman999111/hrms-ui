@@ -4685,6 +4685,20 @@ input.is-invalid:focus {
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
+.last-column-fixed th:last-child,
+.last-column-fixed td:last-child {
+  background-color: white;
+  position: sticky;
+  right: 0;
+}
+
+.first-column-fixed th:first-child,
+.first-column-fixed td:first-child {
+  background-color: white;
+  position: sticky;
+  left: 0;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

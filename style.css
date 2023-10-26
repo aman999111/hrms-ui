@@ -373,3 +373,16 @@ input.is-invalid {
 ::-webkit-scrollbar-thumb {
     @apply bg-gray-300 rounded-full hover:bg-gray-500;
 }
+
+.last-column-fixed th:last-child,
+.last-column-fixed td:last-child {
+    background-color: white;
+    position: sticky;
+    right: 0;
+}
+.first-column-fixed th:first-child,
+.first-column-fixed td:first-child {
+    background-color: white;
+    position: sticky;
+    left: 0;
+}
