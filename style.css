@@ -178,6 +178,9 @@ body {
 .status.deployed {
     @apply text-amber-500 bg-amber-100;
 }
+.status.draft {
+    @apply text-slate-500 bg-slate-200;
+}
 
 
 /* @media screen and (max-width: 1280px) {
@@ -195,7 +198,7 @@ body {
     @apply py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500;
 }
 
-.k-input.is-invalid {
+input.is-invalid {
     @apply border-red-400 focus:border-red-500 focus:ring-red-500;
 }
 
@@ -281,9 +284,18 @@ body {
 
 /* Datatable */
 
-@media screen and (max-width: 1280px) {
+/* @media screen and (max-width: 1370px) {
+
+} */
+
+@media screen and (max-width: 1600px) {
     html {
-        font-size: 90%;
+        font-size: 80%;
+    }
+}
+@media screen and (max-width: 1400) {
+    html {
+        font-size: 70%;
     }
 }
 
@@ -340,4 +352,15 @@ body {
     .open-mobile-sidebar {
         display: inline-flex;
     }
+}
+
+.dh-checklist-fill textarea {
+    display: none !important ;
+}
+
+.dh-checklist-fill:has(input:checked) textarea {
+    display: block !important;
+}
+.is-invalid {
+    @apply border-red-400 focus:border-red-500 focus:ring-red-500;
 }
