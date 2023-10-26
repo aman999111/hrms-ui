@@ -364,3 +364,12 @@ input.is-invalid {
 .is-invalid {
     @apply border-red-400 focus:border-red-500 focus:ring-red-500;
 }
+
+::-webkit-scrollbar {
+    width: .25rem;
+    height: .25rem;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full hover:bg-gray-500;
+}

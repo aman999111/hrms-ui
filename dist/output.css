@@ -4669,6 +4669,22 @@ input.is-invalid:focus {
   --tw-ring-color: rgb(239 68 68 / var(--tw-ring-opacity));
 }
 
+::-webkit-scrollbar {
+  width: .25rem;
+  height: .25rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
