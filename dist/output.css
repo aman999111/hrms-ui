@@ -1469,6 +1469,10 @@ select {
   height: 100vh;
 }
 
+.h-\[1px\] {
+  height: 1px;
+}
+
 .max-h-60 {
   max-height: 15rem;
 }
@@ -5455,6 +5459,10 @@ input.is-invalid:focus {
 
   .sm\:whitespace-nowrap {
     white-space: nowrap;
+  }
+
+  .sm\:border-r {
+    border-right-width: 1px;
   }
 
   .sm\:p-3 {
