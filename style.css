@@ -142,9 +142,8 @@ body {
 }
 
 .main {
-    @apply pl-[14rem] xl:pl-[17rem] 2xl:pl-[25rem] h-[calc(100vh-3.5rem)] xl:h-[calc(100vh-4rem)] 2xl:h-[calc(100vh-5rem)] mt-14 xl:mt-16 2xl:mt-20;
+    @apply pl-[14rem] xl:pl-[17.5rem] 2xl:pl-[18rem] h-[calc(100vh-3.5rem)] xl:h-[calc(100vh-4rem)] 2xl:h-[calc(100vh-5rem)] mt-14 xl:mt-16 2xl:mt-20 pr-4 xl:pr-6 2xl:pr-8;
     padding-top: 1rem;
-    padding-right: 1rem;
     padding-bottom: 1rem;
 }
 
@@ -290,7 +289,12 @@ input.is-invalid {
 
 @media screen and (max-width: 1600px) {
     html {
-        font-size: 80%;
+        font-size: 95%;
+    }
+}
+@media screen and (max-width: 1500px) {
+    html {
+        font-size: 90%;
     }
 }
 @media screen and (max-width: 1400) {
@@ -325,7 +329,7 @@ input.is-invalid {
 }
 
 :has(.sidebar.shrinked) .main {
-    padding-left: 6rem;
+    @apply pl-[6rem] xl:pl-[6.5rem] 2xl:pl-[7rem];
 }
 
 .open-mobile-sidebar {
@@ -385,4 +389,28 @@ input.is-invalid {
     background-color: white;
     position: sticky;
     left: 0;
+}
+
+.ss-main {
+    @apply focus:border-emerald-500 focus:ring-emerald-500 px-4 py-2 focus:shadow-none;
+}
+
+.ss-content .ss-search input {
+    @apply focus:border-emerald-500 focus:ring-emerald-500 px-4 py-2 focus:shadow-none;
+}
+
+.ss-main .ss-values .ss-value {
+    @apply bg-emerald-400;
+}
+
+.ss-selected {
+    @apply !bg-emerald-400;
+}
+
+.ss-max {
+    @apply !bg-emerald-400;
+}
+
+.ss-option {
+    @apply hover:!bg-emerald-400;
 }
