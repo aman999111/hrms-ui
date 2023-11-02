@@ -232,7 +232,7 @@ input.is-invalid {
     display: none;
 }
 .multipart-form.active {
-    display: block;
+    display: flex;
 }
 
 .switch-view.active {

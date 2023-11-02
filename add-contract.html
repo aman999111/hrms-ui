@@ -209,7 +209,7 @@
         </div>
     </div>
 
-    <div class="main overflow-y-auto">
+    <div class="main flex flex-col overflow-y-auto">
         <div class="flex items-center justify-between mb-5">
             <div>
                 <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C]">Add Contract</h2>
@@ -220,137 +220,139 @@
                 Save As Draft
             </button>
         </div>
-        <form action="">
-            <div class="multipart-wrapper">
+        <form class="flex-1 flex flex-col" action="">
+            <div class="multipart-wrapper flex-1 flex flex-col">
                 <div class="multipart-indicators-wrapper flex items-center border-b">
                     <div class="multipart-indicator py-2 px-4 active">Contract Details</div>
                     <div class="multipart-indicator py-2 px-4">Lines</div>
                     <div class="multipart-indicator py-2 px-4">Presales Checklist</div>
                     <!-- <div class="multipart-indicator py-2 px-4">Contact Persons</div> -->
                 </div>
-                <div class="multipart-form-wrapper mt-4">
-                    <div class="multipart-form active w-full">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <span class="mb-2 font-medium block">Contract Number*</span>
-                                <div class="flex items-center gap-3 flex-wrap">
-                                    <input type="email"
-                                        class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
-                                        placeholder="Enter Client Name">
+                <div class="multipart-form-wrapper mt-4 flex-1 flex flex-col">
+                    <div class="multipart-form active w-full flex-1 flex flex-col">
+                        <div class="flex-1 overflow-y-auto">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <span class="mb-2 font-medium block">Contract Number*</span>
+                                    <div class="flex items-center gap-3 flex-wrap">
+                                        <input type="email"
+                                            class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                            placeholder="Enter Contract Number">
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <span class="mb-2 font-medium block">PO Number</span>
-                                <div class="flex items-center gap-3 flex-wrap">
-                                    <input type="email"
-                                        class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
-                                        placeholder="Enter Project Name">
+                                <div>
+                                    <span class="mb-2 font-medium block">PO Number</span>
+                                    <div class="flex items-center gap-3 flex-wrap">
+                                        <input type="email"
+                                            class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                            placeholder="Enter PO Number">
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <span class="mb-2 font-medium block">Customer</span>
-                                <div class="flex items-center gap-3 flex-wrap">
-                                    <input type="email"
-                                        class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
-                                        placeholder="Enter Project Description">
+                                <div>
+                                    <span class="mb-2 font-medium block">Customer</span>
+                                    <div class="flex items-center gap-3 flex-wrap">
+                                        <input type="email"
+                                            class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                            placeholder="Select Customer">
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <span class="mb-2 font-medium block">Project</span>
-                                <select
-                                    class="py-2 px-4 pr-9 block w-full flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500 sm:p-3">
-                                    <option selected>Select Project</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                </select>
-                            </div>
-                            <div>
-                                <span class="mb-2 font-medium block">Practice</span>
-                                <div class="flex items-center gap-3 flex-wrap">
-                                    <input type="email" class="k-input is-invalid" placeholder="Enter Practice">
-                                </div>
-                            </div>
-                            <div>
-                                <span class="mb-2 font-medium block">Contract Start Date</span>
-                                <div class="flex items-center gap-3 flex-wrap">
-                                    <input type="date" class="k-input" placeholder="Enter Practice">
-                                </div>
-                            </div>
-                            <div>
-                                <span class="mb-2 font-medium block">Contract End Date</span>
-                                <div class="flex items-center gap-3 flex-wrap">
-                                    <input type="date" class="k-input" placeholder="Enter Practice">
-                                </div>
-                            </div>
-                            <div>
-                                <span class="mb-2 font-medium block">Contract Type</span>
-                                <select
-                                    class="py-2 px-4 pr-9 block w-full flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500 sm:p-3">
-                                    <option selected>Select Project Type</option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                </select>
-                            </div>
-                            <div>
-                                <span class="mb-2 font-medium block">Amount</span>
-                                <div class="flex items-center gap-3 flex-wrap">
-                                    <input type="text" class="k-input" placeholder="Enter Practice">
-                                </div>
-                            </div>
-                            <div>
-                                <span class="mb-2 font-medium block">Client Coordinator</span>
-                                <div class="flex items-center gap-3 flex-wrap">
-                                    <input type="text" class="k-input" placeholder="Enter Practice">
-                                </div>
-                            </div>
-                            <div>
-                                <span class="mb-2 font-medium block">Contact No*</span>
-                                <div class="flex items-center gap-3 flex-wrap">
-                                    <input type="text" class="k-input" placeholder="Enter Practice">
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex items-center justify-between gap-3 flex-wrap">
-                                    <span class="mb-2 font-medium block">Costing sheet</span>
-                                    <button type="button"
-                                        class="px-5 inline-flex justify-center items-center gap-2 rounded-md border outline-none border-transparent text-emerald-500 text-sm 2xl:text-base"
-                                        data-hs-overlay="#costing-sheet-modal">
-                                        <svg class="w-4 h-4" width="21" height="21" viewBox="0 0 21 21" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M10.5 0C7.72562 0.0334721 5.07431 1.15047 3.11239 3.11239C1.15047 5.07431 0.0334721 7.72562 0 10.5C0.0334721 13.2744 1.15047 15.9257 3.11239 17.8876C5.07431 19.8495 7.72562 20.9665 10.5 21C13.2744 20.9665 15.9257 19.8495 17.8876 17.8876C19.8495 15.9257 20.9665 13.2744 21 10.5C20.9665 7.72562 19.8495 5.07431 17.8876 3.11239C15.9257 1.15047 13.2744 0.0334721 10.5 0ZM16.5 11.25H11.25V16.5H9.75V11.25H4.5V9.75H9.75V4.5H11.25V9.75H16.5V11.25Z"
-                                                fill="#00CC83" />
-                                            <path
-                                                d="M16.5 11.25H11.25V16.5H9.75V11.25H4.5V9.75H9.75V4.5H11.25V9.75H16.5V11.25Z"
-                                                fill="white" />
-                                        </svg>
-                                        Create</button>
-                                </div>
-
-                                <div class="flex items-center gap-3 flex-wrap">
-                                    <!-- <input type="text"
-                                    class="k-input"
-                                    placeholder="Enter Practice"> -->
-
-                                    <select class="k-input">
-                                        <option selected>Open this select menu</option>
+                                <div>
+                                    <span class="mb-2 font-medium block">Project</span>
+                                    <select
+                                        class="py-2 px-4 pr-9 block w-full flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500 sm:p-3">
+                                        <option selected>Select Project</option>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                     </select>
                                 </div>
+                                <div>
+                                    <span class="mb-2 font-medium block">Practice</span>
+                                    <div class="flex items-center gap-3 flex-wrap">
+                                        <input type="email" class="k-input is-invalid" placeholder="Enter Practice">
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="mb-2 font-medium block">Contract Type</span>
+                                    <select
+                                        class="py-2 px-4 pr-9 block w-full flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500 sm:p-3">
+                                        <option selected>Select Contract Type</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <span class="mb-2 font-medium block">Contract Start Date</span>
+                                    <div class="flex items-center gap-3 flex-wrap">
+                                        <input type="date" class="k-input">
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="mb-2 font-medium block">Contract End Date</span>
+                                    <div class="flex items-center gap-3 flex-wrap">
+                                        <input type="date" class="k-input">
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="mb-2 font-medium block">Amount</span>
+                                    <div class="flex items-center gap-3 flex-wrap">
+                                        <input type="number" class="k-input" placeholder="Enter Amount">
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="mb-2 font-medium block">Client Coordinator</span>
+                                    <div class="flex items-center gap-3 flex-wrap">
+                                        <input type="text" class="k-input" placeholder="Enter Client Coordinator">
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="mb-2 font-medium block">Contact No*</span>
+                                    <div class="flex items-center gap-3 flex-wrap">
+                                        <input type="text" class="k-input" placeholder="Enter Contact Number">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex items-center justify-between gap-3 flex-wrap">
+                                        <span class="mb-2 font-medium block">Costing sheet</span>
+                                        <button type="button"
+                                            class="px-5 inline-flex justify-center items-center gap-2 rounded-md border outline-none border-transparent text-emerald-500 text-sm 2xl:text-base"
+                                            data-hs-overlay="#costing-sheet-modal">
+                                            <svg class="w-4 h-4" width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10.5 0C7.72562 0.0334721 5.07431 1.15047 3.11239 3.11239C1.15047 5.07431 0.0334721 7.72562 0 10.5C0.0334721 13.2744 1.15047 15.9257 3.11239 17.8876C5.07431 19.8495 7.72562 20.9665 10.5 21C13.2744 20.9665 15.9257 19.8495 17.8876 17.8876C19.8495 15.9257 20.9665 13.2744 21 10.5C20.9665 7.72562 19.8495 5.07431 17.8876 3.11239C15.9257 1.15047 13.2744 0.0334721 10.5 0ZM16.5 11.25H11.25V16.5H9.75V11.25H4.5V9.75H9.75V4.5H11.25V9.75H16.5V11.25Z"
+                                                    fill="#00CC83" />
+                                                <path
+                                                    d="M16.5 11.25H11.25V16.5H9.75V11.25H4.5V9.75H9.75V4.5H11.25V9.75H16.5V11.25Z"
+                                                    fill="white" />
+                                            </svg>
+                                            Create</button>
+                                    </div>
+    
+                                    <div class="flex items-center gap-3 flex-wrap">
+                                        <!-- <input type="text"
+                                        class="k-input"
+                                        placeholder="Enter Practice"> -->
+    
+                                        <select class="k-input">
+                                            <option selected>Open this select menu</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="mt-4">
+                        <div class="pt-2 pb-4 sticky -bottom-4 bg-white">
                             <button type="button" onclick="showFormStep(2);"
                                 class="py-2 px-5 inline-flex justify-center items-center gap-2 rounded-md border border-emerald-400 bg-[#00cc83] text-white hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 transition-all text-sm sm:text-base">
                                 Save & Next
                             </button>
                         </div>
                     </div>
-                    <div class="multipart-form w-full">
+                    <div class="multipart-form w-full flex-1 flex flex-col">
                         <div class="flex items-stretch sm:items-end flex-col sm:flex-row gap-4">
                             <div class="flex-[2]">
                                 <label for="">Line Description 1</label>
@@ -362,16 +364,16 @@
                             </div>
                             <div class="flex-[1]">
                                 <label for="">Line Amount</label>
-                                <input id="lamount" type="text" class="k-input w-full">
+                                <input id="lamount" type="number" class="k-input w-full">
                             </div>
                             <button type="button" onclick="addLineItem();"
                             class="py-3 px-5 inline-flex justify-center items-center gap-2 rounded-md border border-emerald-400 bg-[#00cc83] text-white hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 transition-all text-sm">
-                            Add
+                            Add/Edit
                         </button>
                         </div>
-                        <div class="flex flex-col my-4">
+                        <div class="flex flex-col my-4 flex-1 overflow-y-auto">
                             <div class="-m-1.5 overflow-x-auto">
-                                <div class="p-1.5 min-w-full inline-block align-middle">
+                                <div class="p-1.5 min-w-full block align-middle">
                                     <div class="overflow-hidden">
                                         <table class="min-w-full divide-y divide-gray-200" id="lineItemTable">
                                             <thead>
@@ -404,7 +406,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-4 flex items-center gap-4">
+                        <div class="pt-2 pb-4 sticky -bottom-4 bg-white flex items-center gap-4">
                             <button type="button" onclick="showFormStep(1);"
                             class="py-2 px-5 inline-flex justify-center items-center gap-2 rounded-md border border-gray-400 bg-gray-700 text-white hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all text-sm sm:text-base">
                             Prev
@@ -415,81 +417,117 @@
                         </button>
                         </div>
                     </div>
-                    <div class="multipart-form w-full">
-                        <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C] mb-6">Questions</h2>
-                        <div class="mb-4">
-                            <span class="mb-2 font-medium block">1. ERP systems in use with their version and respective
-                                databases</span>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <input type="email"
-                                    class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
-                                    placeholder="Enter Client Name">
-                                <input type="email"
-                                    class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
-                                    placeholder="Enter Client Name">
+                    <div class="multipart-form w-full flex-1 flex flex-col">
+                        <div class="flex-1 overflow-y-auto">
+                            <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C] mb-6">Questions</h2>
+                            <div class="presales-questions-wrapper">
+                                <div class="mb-4">
+                                    <span class="mb-2 font-medium block"><span class="question_count">1</span>. ERP systems in use with their version and respective
+                                        databases</span>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <input type="email"
+                                            class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                            placeholder="Ref Response">
+                                        <input type="email"
+                                            class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                            placeholder="Response From Client">
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <span class="mb-2 font-medium block"><span class="question_count">2</span>. Legal & Logical Entities that are implemented on the
+                                        application</span>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <input type="email"
+                                            class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                            placeholder="Ref Response">
+                                        <input type="email"
+                                            class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                            placeholder="Response From Client">
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <span class="mb-2 font-medium block"><span class="question_count">3</span>. ERP systems in use with their version and respective
+                                        databases</span>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <input type="email"
+                                            class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                            placeholder="Ref Response">
+                                        <input type="email"
+                                            class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                            placeholder="Response From Client">
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <span class="mb-2 font-medium block"><span class="question_count">4</span>. ERP systems in use with their version and respective
+                                        databases</span>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <input type="email"
+                                            class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                            placeholder="Ref Response">
+                                        <input type="email"
+                                            class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                            placeholder="Response From Client">
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <span class="mb-2 font-medium block"><span class="question_count">5</span>. ERP systems in use with their version and respective
+                                        databases</span>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <input type="email"
+                                            class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                            placeholder="Ref Response">
+                                        <input type="email"
+                                            class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                            placeholder="Response From Client">
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <span class="mb-2 font-medium block"><span class="question_count">6</span>. ERP systems in use with their version and respective
+                                        databases</span>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <input type="email"
+                                            class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                            placeholder="Ref Response">
+                                        <input type="email"
+                                            class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                            placeholder="Response From Client">
+                                    </div>
+                                </div>
+                                <!-- <div class="flex items-end gap-4 mb-4">
+                                    <div class="flex-1">
+                                        <div class="flex items-center gap-1">
+                                            <span class="question_count font-medium">7</span>.
+                                            <input type="text" class="k-input w-full mb-2" placeholder="Enter question">
+                                        </div>
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                            <input type="email"
+                                                class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                                placeholder="Enter Response">
+                                            <input type="email"
+                                                class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                                placeholder="Enter Response">
+                                        </div>
+                                    </div>
+                                    <button class="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border-2 border-red-200 font-semibold text-red-500 hover:text-white hover:bg-red-500 hover:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-200 focus:ring-offset-2 transition-all text-sm">
+                                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><path fill="currentColor" d="M360 184h-8c4.4 0 8-3.6 8-8v8h304v-8c0 4.4 3.6 8 8 8h-8v72h72v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80h72v-72zm504 72H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zM731.3 840H292.7l-24.2-512h487l-24.2 512z"/></svg>
+                                    </button>
+                                </div> -->
+                            </div>
+                            <div class="flex items-center justify-between flex-wrap p-2">
+                                <div>
+                                    <input class="hidden" type="file" id="attachDocument">
+                                    <label for="attachDocument" class="py-[.688rem] px-4 inline-flex justify-center items-center gap-2 rounded-md border-2 border-blue-400 font-semibold text-blue-500 hover:text-white hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm">
+                                        <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M12 4a5 5 0 0 0-5 5v6a1 1 0 1 1-2 0V9a7 7 0 1 1 14 0v8a5 5 0 0 1-10 0V9a3 3 0 0 1 6 0v8a1 1 0 1 1-2 0V9a1 1 0 1 0-2 0v8a3 3 0 0 0 6 0V9a5 5 0 0 0-5-5Z" clip-rule="evenodd"/></svg>
+                                        Attach Documents
+                                    </label>
+                                </div>
+                                <button onclick="addNewQuestion();" type="button" class="py-[.688rem] px-4 inline-flex justify-center items-center gap-2 rounded-md border-2 border-blue-400 font-semibold text-blue-500 hover:text-white hover:bg-blue-500 hover:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm">
+                                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M18 13h-5v5c0 .55-.45 1-1 1s-1-.45-1-1v-5H6c-.55 0-1-.45-1-1s.45-1 1-1h5V6c0-.55.45-1 1-1s1 .45 1 1v5h5c.55 0 1 .45 1 1s-.45 1-1 1z"/></svg>
+                                    Add Question
+                                </button>
                             </div>
                         </div>
-                        <div class="mb-4">
-                            <span class="mb-2 font-medium block">2. Legal & Logical Entities that are implemented on the
-                                application</span>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <input type="email"
-                                    class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
-                                    placeholder="Enter Client Name">
-                                <input type="email"
-                                    class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
-                                    placeholder="Enter Client Name">
-                            </div>
-                        </div>
-                        <div class="mb-4">
-                            <span class="mb-2 font-medium block">3. ERP systems in use with their version and respective
-                                databases</span>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <input type="email"
-                                    class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
-                                    placeholder="Enter Client Name">
-                                <input type="email"
-                                    class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
-                                    placeholder="Enter Client Name">
-                            </div>
-                        </div>
-                        <div class="mb-4">
-                            <span class="mb-2 font-medium block">4. ERP systems in use with their version and respective
-                                databases</span>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <input type="email"
-                                    class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
-                                    placeholder="Enter Client Name">
-                                <input type="email"
-                                    class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
-                                    placeholder="Enter Client Name">
-                            </div>
-                        </div>
-                        <div class="mb-4">
-                            <span class="mb-2 font-medium block">4. ERP systems in use with their version and respective
-                                databases</span>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <input type="email"
-                                    class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
-                                    placeholder="Enter Client Name">
-                                <input type="email"
-                                    class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
-                                    placeholder="Enter Client Name">
-                            </div>
-                        </div>
-                        <div class="mb-4">
-                            <span class="mb-2 font-medium block">4. ERP systems in use with their version and respective
-                                databases</span>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <input type="email"
-                                    class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
-                                    placeholder="Enter Client Name">
-                                <input type="email"
-                                    class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
-                                    placeholder="Enter Client Name">
-                            </div>
-                        </div>
-                        <div class="mt-4 flex items-center gap-4">
+                        <div class="pt-2 pb-4 sticky -bottom-4 bg-white flex items-center gap-4">
                             <button type="button" onclick="showFormStep(2);"
                                 class="py-2 px-5 inline-flex justify-center items-center gap-2 rounded-md border border-gray-400 bg-gray-700 text-white hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all text-sm sm:text-base">
                                 Prev
@@ -533,7 +571,7 @@
                             <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C]">Create New</h2>
                             <p>Please create the costing sheet by filling the requires information</p>
                         </div>
-                        <div class="flex items-center justify-between gap-3">
+                        <!-- <div class="flex items-center justify-between gap-3">
                             <button type="button"
                                 class="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm">
                                 Upload Excel
@@ -542,23 +580,29 @@
                                 class="py-2 px-5 inline-flex justify-center items-center gap-2 rounded-md border border-emerald-400 hover:bg-[#00cc83] hover:text-white text-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 transition-all text-sm sm:text-base">
                                 Save As Draft
                             </button>
-                        </div>
+                        </div> -->
                     </div>
 
                     <form action="#">
+                        <div class="mb-4">
+                            <span class="mb-2 font-medium block">Costing Sheet Name</span>
+                            <input type="text"
+                                            class="w-full py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                            placeholder="Enter Costing Sheet Name">
+                        </div>
                         <div id="costingModalWrapper" class="flex flex-col gap-6">
                             <div class="grid grid-cols-1 sm:grid-cols-4 gap-3">
                                 <div>
-                                    <span class="mb-2 font-medium block">Skill 1 Name</span>
+                                    <span class="mb-2 font-medium block">Skill Name</span>
                                     <div class="flex items-center gap-3 flex-wrap">
-                                        <input type="email"
+                                        <input type="text"
                                             class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
                                             placeholder="Enter Skill Name">
                                     </div>
                                 </div>
 
                                 <div>
-                                    <span class="mb-2 font-medium block">Skill 1 Experience</span>
+                                    <span class="mb-2 font-medium block">Skill Experience</span>
                                     <div class="flex items-center gap-3 flex-wrap">
                                         <select class="k-input">
                                             <option selected>Open this select menu</option>
@@ -570,18 +614,18 @@
                                 </div>
 
                                 <div>
-                                    <span class="mb-2 font-medium block">No Required Resources</span>
+                                    <span class="mb-2 font-medium block">No. Of Required Resources</span>
                                     <div class="flex items-center gap-3 flex-wrap">
-                                        <input type="email"
+                                        <input type="text"
                                             class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
                                             placeholder="Enter Skill Name">
                                     </div>
                                 </div>
 
                                 <div>
-                                    <span class="mb-2 font-medium block">Skill 1 Cost</span>
+                                    <span class="mb-2 font-medium block">Skill Cost</span>
                                     <div class="flex items-center gap-3 flex-wrap">
-                                        <input type="email"
+                                        <input type="text"
                                             class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
                                             placeholder="Enter Skill Cost">
                                     </div>
@@ -909,6 +953,10 @@
             
                                         <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 hidden z-30 mt-2 min-w-[8rem] bg-white shadow-md rounded-lg"
                                             aria-labelledby="hs-dropdown-default">
+                                            <button class="w-full flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-emerald-500"
+                                                >
+                                                Edit
+                                            </button>
                                             <button onclick="deleteRow(this);" class="w-full flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-emerald-500"
                                                 >
                                                 Delete
@@ -937,6 +985,42 @@
                                             No Data Yet</td>
                                     </tr>`;
             }
+        }
+        
+        function addNewQuestion() {
+            const questionsWrapper = document.querySelector(".presales-questions-wrapper");
+            const _newQuestionDiv = document.createElement("div");
+            _newQuestionDiv.classList.add("mb-4", "flex", "items-end", "gap-4");
+            _newQuestionDiv.innerHTML = `<div class="flex-1">
+                                            <div class="flex items-center gap-1">
+                                                <span class="question_count font-medium">${questionsWrapper.children.length + 1}</span>.
+                                                <input type="text" class="k-input w-full mb-2" placeholder="Enter question">
+                                            </div>
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                                <input type="email"
+                                                    class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                                    placeholder="Ref Response">
+                                                <input type="email"
+                                                    class="py-3 px-4 block flex-1 border-gray-200 rounded-md text-sm focus:border-emerald-500 focus:ring-emerald-500"
+                                                    placeholder="Response From Client">
+                                            </div>
+                                        </div>
+                                        <button onclick="deleteQuestion(this);" class="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border-2 border-red-200 font-semibold text-red-500 hover:text-white hover:bg-red-500 hover:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-200 focus:ring-offset-2 transition-all text-sm">
+                                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><path fill="currentColor" d="M360 184h-8c4.4 0 8-3.6 8-8v8h304v-8c0 4.4 3.6 8 8 8h-8v72h72v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80h72v-72zm504 72H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zM731.3 840H292.7l-24.2-512h487l-24.2 512z"/></svg>
+                                        </button>`;
+            questionsWrapper.appendChild(_newQuestionDiv);
+        }
+
+        function deleteQuestion(btn) {
+            btn.parentElement.remove();
+            recalculateQuestionNumbers();
+        }
+
+        function recalculateQuestionNumbers() {
+            const allQuestionNumber = document.querySelectorAll(".presales-questions-wrapper .question_count");
+            allQuestionNumber.forEach((item, index) => {
+                item.innerHTML = index+1;
+            })
         }
     </script>
 </body>
