@@ -1079,6 +1079,10 @@ select {
   z-index: 9999;
 }
 
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
 .float-right {
   float: right;
 }
@@ -1223,6 +1227,10 @@ select {
   margin-bottom: 1rem;
 }
 
+.mb-auto {
+  margin-bottom: auto;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -1273,10 +1281,6 @@ select {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mb-auto {
-  margin-bottom: auto;
 }
 
 .mt-auto {
@@ -5592,6 +5596,10 @@ input.is-invalid:focus {
 }
 
 @media (min-width: 640px) {
+  .sm\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
   .sm\:mx-12 {
     margin-left: 3rem;
     margin-right: 3rem;
@@ -5612,6 +5620,10 @@ input.is-invalid:focus {
 
   .sm\:mt-1 {
     margin-top: 0.25rem;
+  }
+
+  .sm\:block {
+    display: block;
   }
 
   .sm\:flex {
