@@ -1162,6 +1162,11 @@ select {
   margin-bottom: auto;
 }
 
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
 .-mb-4 {
   margin-bottom: -1rem;
 }
@@ -1268,6 +1273,10 @@ select {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.ml-3\.5 {
+  margin-left: 0.875rem;
 }
 
 .box-border {
@@ -1477,6 +1486,10 @@ select {
   height: 100vh;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
 .max-h-60 {
   max-height: 15rem;
 }
@@ -1601,6 +1614,10 @@ select {
   min-width: 20rem;
 }
 
+.min-w-\[8rem\] {
+  min-width: 8rem;
+}
+
 .min-w-full {
   min-width: 100%;
 }
@@ -1643,6 +1660,14 @@ select {
 
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.flex-\[1\] {
+  flex: 1;
+}
+
+.flex-\[2\] {
+  flex: 2;
 }
 
 .flex-none {
@@ -2815,6 +2840,11 @@ select {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
+.border-gray-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+
 .border-transparent {
   border-color: transparent;
 }
@@ -2910,6 +2940,11 @@ select {
 .bg-gray-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
+.bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
 .bg-gray-900 {
@@ -4010,6 +4045,10 @@ select {
 
 .\[vite\:html\] {
   vite: html;
+}
+
+.\[--auto-close\:inside\] {
+  --auto-close: inside;
 }
 
 @font-face {
@@ -5452,6 +5491,26 @@ input.is-invalid:focus {
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 
+  .dark\:text-gray-300 {
+    --tw-text-opacity: 1;
+    color: rgb(209 213 219 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity));
+  }
+
+  .dark\:checked\:border-blue-500:checked {
+    --tw-border-opacity: 1;
+    border-color: rgb(59 130 246 / var(--tw-border-opacity));
+  }
+
+  .dark\:checked\:bg-blue-500:checked {
+    --tw-bg-opacity: 1;
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+  }
+
   .dark\:hover\:bg-gray-600:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(75 85 99 / var(--tw-bg-opacity));
@@ -5531,8 +5590,16 @@ input.is-invalid:focus {
     margin-bottom: 2rem;
   }
 
+  .sm\:mt-1 {
+    margin-top: 0.25rem;
+  }
+
   .sm\:flex {
     display: flex;
+  }
+
+  .sm\:inline-flex {
+    display: inline-flex;
   }
 
   .sm\:h-12 {
@@ -5573,6 +5640,10 @@ input.is-invalid:focus {
 
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:items-end {
+    align-items: flex-end;
   }
 
   .sm\:items-center {
