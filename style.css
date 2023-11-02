@@ -297,7 +297,7 @@ input.is-invalid {
         font-size: 90%;
     }
 }
-@media screen and (max-width: 1400) {
+@media screen and (max-width: 1400px) {
     html {
         font-size: 70%;
     }
