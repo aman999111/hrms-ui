@@ -1610,6 +1610,10 @@ select {
   min-width: 10rem;
 }
 
+.min-w-\[12rem\] {
+  min-width: 12rem;
+}
+
 .min-w-\[15rem\] {
   min-width: 15rem;
 }
@@ -3533,6 +3537,11 @@ select {
   color: rgb(199 201 217 / var(--tw-text-opacity));
 }
 
+.text-\[\#FF522C\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 82 44 / var(--tw-text-opacity));
+}
+
 .text-\[\#c9c9c9\] {
   --tw-text-opacity: 1;
   color: rgb(201 201 201 / var(--tw-text-opacity));
@@ -4239,6 +4248,14 @@ body {
   color: white;
 }
 
+.menu-item.active img {
+  filter: brightness(0) invert(1);
+}
+
+.menu-item:hover img {
+  filter: brightness(0) invert(1);
+}
+
 .main {
   margin-top: 3.5rem;
   height: calc(100vh - 3.5rem);
@@ -4695,15 +4712,15 @@ input.is-invalid:focus {
 
 @media screen and (max-width: 1600px) {
   html {
-    font-size: 95%;
+    font-size: 80%;
   }
 }
 
-@media screen and (max-width: 1500px) {
-  html {
-    font-size: 90%;
-  }
-}
+/* @media screen and (max-width: 1500px) {
+    html {
+        font-size: 80%;
+    }
+} */
 
 @media screen and (max-width: 1400px) {
   html {

@@ -10,11 +10,10 @@
 </head>
 
 <body>
-    <div class="sidebar fixed left-0 top-0 h-screen w-52 xl:w-64 2xl:w-96 bg-[#f9f9f9] pl-4 xl:pl-10 2xl:pl-14 pb-4 pr-4 xl:pr-8 2xl:pr-10 flex flex-col z-30">
+    <!-- <div class="sidebar fixed left-0 top-0 h-screen w-52 xl:w-64 2xl:w-96 bg-[#f9f9f9] pl-4 xl:pl-10 2xl:pl-14 pb-4 pr-4 xl:pr-8 2xl:pr-10 flex flex-col z-30">
         <div class="logo mb-4 lg:mb-6 xl-mb-8 2xl:mb-10 flex items-center gap-2 h-14 xl:h-16 2xl:h-20">
             <img src="./assets/images/prime_logo_icon.svg" class="logo_icon h-12 xl:h-14 2xl:h-18 w-auto" alt="">
             <img src="./assets/images/prime_logo_text.svg" class="logo_text h-6 xl:h-8 2xl:h-10 w-auto" alt="">
-            <!-- <img class="h-10 md:h-12 lg:h-14 xl:h-16 2xl:h-20 w-auto" src="./assets/images/logo.svg" alt=""> -->
         </div>
         <ul class="menu flex-1 overflow-y-auto flex flex-col gap-3 xl:gap-4 2xl:gap-5">
             <li>
@@ -84,7 +83,7 @@
                 </a>
             </li>
         </ul>
-    </div>
+    </div> -->
     <div class="header bg-white border-b h-14 xl:h-16 2xl:h-20 px-4 xl:px-6 2xl:px-8 flex items-center w-[calc(100vw-13rem)] xl:w-[calc(100vw-16rem)] 2xl:w-[calc(100vw-24rem)] fixed top-0 right-0 gap-3 xl:gap-4 2xl:gap-5 z-30">
         <button type="button" onclick="toggleSidebarSize();"
             class="sidebar-toggle inline-flex flex-shrink-0 justify-center items-center gap-2 w-8 h-8 xl:w-10 xl:h-10 2xl:h-12 2xl:w-12 rounded-md border border-transparent font-semibold bg-[#f9f9f9] text-black hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 transition-all text-sm">
@@ -216,47 +215,115 @@
                 <p>Karan Malhotra</p>
             </div>
         </div>
-        <form class="mb-6" action="">
-            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-                <div>
-                    <label for="">Project</label>
-                    <select class="k-input w-full min-w-[15rem]" name="" id="">
-                        <option value="">Select</option>
-                    </select>
+
+        <div>
+            <nav class="flex space-x-2" aria-label="Tabs" role="tablist">
+                <button type="button"
+                    class="hs-tab-active:font-bold hs-tab-active:border-emerald-400 px-2 py-1 inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap text-black hover:text-emerald-600 active"
+                    id="tabs-with-underline-item-1" data-hs-tab="#tabs-with-underline-1"
+                    aria-controls="tabs-with-underline-1" role="tab">
+                    Projects
+                </button>
+                <button type="button"
+                    class="hs-tab-active:font-bold hs-tab-active:border-emerald-400 px-2 py-1 inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap text-black hover:text-emerald-600"
+                    id="tabs-with-underline-item-2" data-hs-tab="#tabs-with-underline-2"
+                    aria-controls="tabs-with-underline-2" role="tab">
+                    Role
+                </button>
+                <button type="button"
+                    class="hs-tab-active:font-bold hs-tab-active:border-emerald-400 px-2 py-1 inline-flex items-center gap-2 border-b-[3px] border-transparent text-sm whitespace-nowrap text-black hover:text-emerald-600"
+                    id="tabs-with-underline-item-3" data-hs-tab="#tabs-with-underline-3"
+                    aria-controls="tabs-with-underline-2" role="tab">
+                    Personal
+                </button>
+            </nav>
+        </div>
+
+        <div class="mt-5">
+            <div id="tabs-with-underline-1" role="tabpanel" aria-labelledby="tabs-with-underline-item-1">
+                <form class="mb-6" action="">
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                        <div>
+                            <label for="">Project</label>
+                            <select class="k-input w-full min-w-[15rem]" name="" id="">
+                                <option value="">Select</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="">Status</label>
+                            <select class="k-input w-full min-w-[10rem]" name="" id=""></select>
+                        </div>
+                        <button type="submit" class="self-end py-3 px-6 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-emerald-500 text-white hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 transition-all text-sm w-full sm:w-auto">Update</button>
+                    </div>
+                </form>
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 flex-wrap">
+                    <div>
+                        <label for="">Practices</label>
+                        <input type="text" name="" id="" class="k-input disabled:opacity-50 disabled:cursor-not-allowed w-full" value="Automation" disabled>
+                    </div>
+                    <div>
+                        <label for="">Sub-Practices</label>
+                        <input type="text" name="" id="" class="k-input disabled:opacity-50 disabled:cursor-not-allowed w-full" value="Power BI" disabled>
+                    </div>
+                    <div>
+                        <label for="">Project Type</label>
+                        <input type="text" name="" id="" class="k-input disabled:opacity-50 disabled:cursor-not-allowed w-full" value="T&M" disabled>
+                    </div>
+                    <div>
+                        <label for="">Current Month Billing</label>
+                        <input type="text" name="" id="" class="k-input disabled:opacity-50 disabled:cursor-not-allowed w-full" value="970.232" disabled>
+                    </div>
+                    <div>
+                        <label for="">Customer</label>
+                        <input type="text" name="" id="" class="k-input disabled:opacity-50 disabled:cursor-not-allowed w-full" value="Google" disabled>
+                    </div>
+                    <div>
+                        <label for="">Delivery Anchor</label>
+                        <input type="text" name="" id="" class="k-input disabled:opacity-50 disabled:cursor-not-allowed w-full" value="Abhishek Pansotra" disabled>
+                    </div>
                 </div>
-                <div>
-                    <label for="">Status</label>
-                    <select class="k-input w-full min-w-[10rem]" name="" id=""></select>
+            </div>
+            <div id="tabs-with-underline-2" class="hidden" role="tabpanel"
+                aria-labelledby="tabs-with-underline-item-2">
+                <div class="flex items-center gap-4 flex-wrap">
+                    <div class="flex">
+                        <input type="checkbox" class="shrink-0 mt-0.5 border-gray-200 rounded text-emerald-600 focus:ring-emerald-500" id="hs-checkbox-group-2">
+                        <label for="hs-checkbox-group-2" class="text-sm text-gray-500 ml-3">Admin</label>
+                    </div>
+                    <div class="flex">
+                        <input type="checkbox" class="shrink-0 mt-0.5 border-gray-200 rounded text-emerald-600 focus:ring-emerald-500" id="hs-checkbox-group-2">
+                        <label for="hs-checkbox-group-2" class="text-sm text-gray-500 ml-3">Sales Person</label>
+                    </div>
+                    <div class="flex">
+                        <input type="checkbox" class="shrink-0 mt-0.5 border-gray-200 rounded text-emerald-600 focus:ring-emerald-500" id="hs-checkbox-group-2">
+                        <label for="hs-checkbox-group-2" class="text-sm text-gray-500 ml-3">Delivery Anchor</label>
+                    </div>
+                    <div class="flex">
+                        <input type="checkbox" class="shrink-0 mt-0.5 border-gray-200 rounded text-emerald-600 focus:ring-emerald-500" id="hs-checkbox-group-2">
+                        <label for="hs-checkbox-group-2" class="text-sm text-gray-500 ml-3">Delivery Head</label>
+                    </div>
                 </div>
-                <button type="submit" class="self-end py-3 px-6 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-emerald-500 text-white hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 transition-all text-sm w-full sm:w-auto">Update</button>
             </div>
-        </form>
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 flex-wrap">
-            <div>
-                <label for="">Practices</label>
-                <input type="text" name="" id="" class="k-input disabled:opacity-50 disabled:cursor-not-allowed w-full" value="Automation" disabled>
-            </div>
-            <div>
-                <label for="">Sub-Practices</label>
-                <input type="text" name="" id="" class="k-input disabled:opacity-50 disabled:cursor-not-allowed w-full" value="Power BI" disabled>
-            </div>
-            <div>
-                <label for="">Project Type</label>
-                <input type="text" name="" id="" class="k-input disabled:opacity-50 disabled:cursor-not-allowed w-full" value="T&M" disabled>
-            </div>
-            <div>
-                <label for="">Current Month Billing</label>
-                <input type="text" name="" id="" class="k-input disabled:opacity-50 disabled:cursor-not-allowed w-full" value="970.232" disabled>
-            </div>
-            <div>
-                <label for="">Customer</label>
-                <input type="text" name="" id="" class="k-input disabled:opacity-50 disabled:cursor-not-allowed w-full" value="Google" disabled>
-            </div>
-            <div>
-                <label for="">Delivery Anchor</label>
-                <input type="text" name="" id="" class="k-input disabled:opacity-50 disabled:cursor-not-allowed w-full" value="Abhishek Pansotra" disabled>
+            <div id="tabs-with-underline-3" class="hidden" role="tabpanel"
+                aria-labelledby="tabs-with-underline-item-2">
+                <div class="flex items-center gap-4 flex-wrap">
+                    <div>
+                        <label for="">Practice</label>
+                        <select class="k-input min-w-[12rem]" name="" id=""></select>
+                    </div>
+                    <div>
+                        <label for="">Sub-Practice</label>
+                        <select class="k-input min-w-[12rem]" name="" id=""></select>
+                    </div>
+                    <div>
+                        <label for="">Skills</label>
+                        <select class="k-input min-w-[12rem]" name="" id=""></select>
+                    </div>
+                </div>
             </div>
         </div>
+
+        
     </div>
     <div id="hs-overlay-right"
         class="hs-overlay hs-overlay-open:translate-x-0 hidden translate-x-full fixed top-0 right-0 transition-all duration-300 transform h-full max-w-xs w-full w-full z-[60] bg-white border-l hidden flex flex-col"
