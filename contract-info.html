@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div
+    <!-- <div
         class="sidebar fixed left-0 top-0 h-screen w-52 xl:w-64 2xl:w-96 bg-[#f9f9f9] pl-4 xl:pl-10 2xl:pl-14 py-3 xl:py-4 2xl:py-5 pr-4 xl:pr-8 2xl:pr-10 flex flex-col z-30">
         <div class="logo mb-4 lg:mb-6 xl-mb-8 2xl:mb-10">
             <img class="h-10 md:h-12 lg:h-14 xl:h-16 2xl:h-20 w-auto" src="./assets/images/logo.svg" alt="">
@@ -98,7 +98,7 @@
                 </a>
             </li>
         </ul>
-    </div>
+    </div> -->
     <div
         class="header bg-white border-b h-14 xl:h-16 2xl:h-20 px-4 xl:px-6 2xl:px-8 flex items-center w-[calc(100vw-13rem)] xl:w-[calc(100vw-16rem)] 2xl:w-[calc(100vw-24rem)] fixed top-0 right-0 gap-3 xl:gap-4 2xl:gap-5 z-30">
         <button type="button"
@@ -197,127 +197,441 @@
         </div>
     </div>
     <div class="main overflow-y-auto">
-        <div class="flex items-center justify-between mb-10">
+        <div class="flex items-center justify-between mb-6">
             <div>
-                <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C]">Pre-Sales Checklist Questions</h2>
-                <p>Add the required details for the new Project</p>
+                <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C]">Contract Info:</h2>
             </div>
-            <button type="button"
+            <!-- <button type="button"
                 class="py-2 px-5 inline-flex justify-center items-center gap-2 rounded-md border border-emerald-400 hover:bg-[#00cc83] hover:text-white text-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 transition-all text-sm sm:text-base">
                 Save As Draft
-            </button>
+            </button> -->
         </div>
-        <form action="">
-            <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C] mb-6">Pre Sales Checklist</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                <div class="">
-                    <span class="mb-2 font-bold block">1. ERP systems in use with their version and respective
-                        databases</span>
-                    <div>
-                        <p class="text-sm font-semibold text-gray-500">Reference Response</p>
-                        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
-                            dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+
+        <div class="bg-[#f9f9f9] p-4 rounded-md mt-4 mb-6">
+            
+            <div class="flex items-center gap-4 flex-wrap border-b py-2">
+                <p class="text-base 2xl:text-lg font-bold text-gray-600">Contract Info: </p>
+                <div>
+                    <p class="text-sm">Sent On  <span class="font-bold">11/09/2022</span></p>
+                </div>
+                <div>
+                    <p class="text-sm">Created By  <span class="font-bold">Keshav Narayan</span></p>
+                </div>
+            </div>
+
+
+            <div class="p-2 flex items-center flex-wrap mt-2">
+                <div class="flex items-center gap-2 border-r pr-3">
+                    <div class="logo w-10 h-10 bg-white rounded-full overflow-hidden flex items-center justify-center">
+                        <img class="w-8 h-8 rounded-full object-cover" src="./assets/images/google-logo.svg" alt="">
                     </div>
                     <div>
-                        <p class="text-sm font-semibold text-gray-500">Response From Client</p>
-                        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
-                            dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                        <p class="text-[.625rem]">Customer</p>
+                        <p class="font-bold">Google</p>
                     </div>
                 </div>
-                <div class="">
-                    <span class="mb-2 font-bold block">2. ERP systems in use with their version and respective
-                        databases</span>
+                <div class="flex pl-3 items-center gap-4">
                     <div>
-                        <p class="text-sm font-semibold text-gray-500">Reference Response</p>
-                        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
-                            dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                        <div>
+                            <span class="text-sm">Email Id</span>
+                        </div>
+                        <p class="text-sm">test@gmail.com</p>
                     </div>
                     <div>
-                        <p class="text-sm font-semibold text-gray-500">Response From Client</p>
-                        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
-                            dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                        <div>
+                            <span class="text-sm">Phone No</span>
+                        </div>
+                        <p class="text-sm">+1234567890</p>
+                    </div>
+                    <div>
+                        <div>
+                            <span class="text-sm">Location</span>
+                        </div>
+                        <p class="text-sm">2300+ mayor street, MI 2432 USA</p>
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                <div class="">
-                    <span class="mb-2 font-bold block">3. ERP systems in use with their version and respective
-                        databases</span>
-                    <div>
-                        <p class="text-sm font-semibold text-gray-500">Reference Response</p>
-                        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
-                            dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
-                    </div>
-                    <div>
-                        <p class="text-sm font-semibold text-gray-500">Response From Client</p>
-                        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
-                            dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
-                    </div>
+            <div class="flex overflow-x-auto gap-4 py-2 border-b mt-4">
+                <div>
+                    <p class="text-sm 2xl:text-base">Contract Number:</p>
+                    <p class="text-sm 2xl:text-base font-bold">987 654 3212</p>
                 </div>
-                <div class="">
-                    <span class="mb-2 font-bold block">4. ERP systems in use with their version and respective
-                        databases</span>
-                    <div>
-                        <p class="text-sm font-semibold text-gray-500">Reference Response</p>
-                        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
-                            dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
-                    </div>
-                    <div>
-                        <p class="text-sm font-semibold text-gray-500">Response From Client</p>
-                        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
-                            dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                <div>
+                    <p class="text-sm 2xl:text-base">PO Number:</p>
+                    <p class="text-sm 2xl:text-base font-bold">987 654 3212</p>
+                </div>
+                <div>
+                    <p class="text-sm 2xl:text-base">Practice:</p>
+                    <p class="text-sm 2xl:text-base font-bold">Data Analytics</p>
+                </div>
+                <div>
+                    <p class="text-sm 2xl:text-base">Contract Start Date:</p>
+                    <p class="text-sm 2xl:text-base font-bold">22/11/2025</p>
+                </div>
+                <div>
+                    <p class="text-sm 2xl:text-base">Contract End Date:</p>
+                    <p class="text-sm 2xl:text-base font-bold">22/11/2025</p>
+                </div>
+                <div>
+                    <p class="text-sm 2xl:text-base">Project Head:</p>
+                    <p class="text-sm 2xl:text-base font-bold">Abhishek Pansotra</p>
+                </div>
+                <div>
+                    <p class="text-sm 2xl:text-base">Project Type:</p>
+                    <p class="text-sm 2xl:text-base font-bold">T&M</p>
+                </div>
+            </div>
+            <div class="flex overflow-x-auto gap-4 pt-2">
+                <div>
+                    <p class="text-sm 2xl:text-base">Project:</p>
+                    <p class="text-sm 2xl:text-base font-bold">Google Project 1</p>
+                </div>
+                <div>
+                    <p class="text-sm 2xl:text-base">Amount:</p>
+                    <p class="text-sm 2xl:text-base font-bold">987 654 3212</p>
+                </div>
+                <div>
+                    <p class="text-sm 2xl:text-base">Client Cordinate:</p>
+                    <p class="text-sm 2xl:text-base font-bold">Data Analytics</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C] mb-4">Line Information</h2>
+
+        <div class="flex flex-col">
+            <div class="-m-1.5 overflow-auto" style="height: 16rem;">
+                <div class="p-1.5 min-w-full inline-block align-middle">
+                    <div class="overflow-hidden">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead>
+                                <tr>
+                                    <th scope="col"
+                                        class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
+                                        Line No</th>
+                                    <th scope="col"
+                                        class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
+                                        Line Description 1</th>
+                                    <th scope="col"
+                                        class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
+                                        Line Description 2</th>
+                                    <th scope="col"
+                                        class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
+                                        Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">01</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800" style="min-width: 20rem;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem minima iure harum repellat aperiam dolore facilis, consequuntur facere cumque id tempora. Nemo sint repudiandae vel fugiat qui ipsa tempora ab.
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-gray-800" style="min-width: 20rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium assumenda mollitia quos natus laborum dignissimos dicta itaque autem neque repellendus odit totam, molestias voluptatum, amet accusantium, ex culpa eveniet. Accusamus?</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">02</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800" style="min-width: 20rem;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem minima iure harum repellat aperiam dolore facilis, consequuntur facere cumque id tempora. Nemo sint repudiandae vel fugiat qui ipsa tempora ab.
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-gray-800" style="min-width: 20rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium assumenda mollitia quos natus laborum dignissimos dicta itaque autem neque repellendus odit totam, molestias voluptatum, amet accusantium, ex culpa eveniet. Accusamus?</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">03</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800" style="min-width: 20rem;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem minima iure harum repellat aperiam dolore facilis, consequuntur facere cumque id tempora. Nemo sint repudiandae vel fugiat qui ipsa tempora ab.
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-gray-800" style="min-width: 20rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium assumenda mollitia quos natus laborum dignissimos dicta itaque autem neque repellendus odit totam, molestias voluptatum, amet accusantium, ex culpa eveniet. Accusamus?</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10,000,000</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">04</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800" style="min-width: 20rem;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem minima iure harum repellat aperiam dolore facilis, consequuntur facere cumque id tempora. Nemo sint repudiandae vel fugiat qui ipsa tempora ab.
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-gray-800" style="min-width: 20rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium assumenda mollitia quos natus laborum dignissimos dicta itaque autem neque repellendus odit totam, molestias voluptatum, amet accusantium, ex culpa eveniet. Accusamus?</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10,000,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                <div class="">
-                    <span class="mb-2 font-bold block">5. ERP systems in use with their version and respective
-                        databases</span>
-                    <div>
-                        <p class="text-sm font-semibold text-gray-500">Reference Response</p>
-                        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
-                            dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
-                    </div>
-                    <div>
-                        <p class="text-sm font-semibold text-gray-500">Response From Client</p>
-                        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
-                            dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
-                    </div>
-                </div>
-                <div class="">
-                    <span class="mb-2 font-bold block">6. ERP systems in use with their version and respective
-                        databases</span>
-                    <div>
-                        <p class="text-sm font-semibold text-gray-500">Reference Response</p>
-                        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
-                            dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
-                    </div>
-                    <div>
-                        <p class="text-sm font-semibold text-gray-500">Response From Client</p>
-                        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
-                            dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-4">
-                <button type="button" onclick="openModal();"
-                    class="py-2 px-5 inline-flex justify-center items-center gap-2 rounded-md border border-emerald-400 bg-[#00cc83] text-white hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 transition-all text-sm sm:text-base">
-                    Send for approval
+        </div>
+
+        
+        <div class="mt-4">
+            <nav class="flex space-x-2" aria-label="Tabs" role="tablist">
+                <button type="button"
+                    class="hs-tab-active:bg-gray-800 hs-tab-active:text-white dark:hs-tab-active:bg-gray-700 dark:hs-tab-active:text-white py-2 px-5 inline-flex items-center gap-2 bg-transparent text-sm font-medium text-center text-gray-500 rounded-lg hover:text-emerald-400 dark:hover:text-gray-400 active"
+                    id="pills-on-gray-color-item-1" data-hs-tab="#pills-on-gray-color-1"
+                    aria-controls="pills-on-gray-color-1" role="tab">
+                    Presales Checklist
                 </button>
+                <button type="button"
+                    class="hs-tab-active:bg-gray-800 hs-tab-active:text-white dark:hs-tab-active:bg-gray-700 dark:hs-tab-active:text-white py-2 px-5 inline-flex items-center gap-2 bg-transparent text-sm font-medium text-center text-gray-500 rounded-lg hover:text-emerald-400 dark:hover:text-gray-400"
+                    id="pills-on-gray-color-item-2" data-hs-tab="#pills-on-gray-color-2"
+                    aria-controls="pills-on-gray-color-2" role="tab">
+                    Team
+                </button>
+                <button type="button"
+                    class="hs-tab-active:bg-gray-800 hs-tab-active:text-white dark:hs-tab-active:bg-gray-700 dark:hs-tab-active:text-white py-2 px-5 inline-flex items-center gap-2 bg-transparent text-sm font-medium text-center text-gray-500 rounded-lg hover:text-emerald-400 dark:hover:text-gray-400"
+                    id="pills-on-gray-color-item-3" data-hs-tab="#pills-on-gray-color-3"
+                    aria-controls="pills-on-gray-color-3" role="tab">
+                    Billing
+                </button>
+            </nav>
+
+            <div class="mt-3">
+                <div id="pills-on-gray-color-1" role="tabpanel" aria-labelledby="pills-on-gray-color-item-1">
+                    <form action="">
+                        <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C] mb-6">Pre Sales Checklist</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                            <div class="">
+                                <span class="mb-2 font-bold block">1. ERP systems in use with their version and respective
+                                    databases</span>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-500">Reference Response</p>
+                                    <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
+                                        dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-500">Response From Client</p>
+                                    <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
+                                        dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                                </div>
+                            </div>
+                            <div class="">
+                                <span class="mb-2 font-bold block">2. ERP systems in use with their version and respective
+                                    databases</span>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-500">Reference Response</p>
+                                    <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
+                                        dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-500">Response From Client</p>
+                                    <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
+                                        dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                            <div class="">
+                                <span class="mb-2 font-bold block">3. ERP systems in use with their version and respective
+                                    databases</span>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-500">Reference Response</p>
+                                    <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
+                                        dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-500">Response From Client</p>
+                                    <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
+                                        dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                                </div>
+                            </div>
+                            <div class="">
+                                <span class="mb-2 font-bold block">4. ERP systems in use with their version and respective
+                                    databases</span>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-500">Reference Response</p>
+                                    <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
+                                        dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-500">Response From Client</p>
+                                    <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
+                                        dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                            <div class="">
+                                <span class="mb-2 font-bold block">5. ERP systems in use with their version and respective
+                                    databases</span>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-500">Reference Response</p>
+                                    <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
+                                        dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-500">Response From Client</p>
+                                    <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
+                                        dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                                </div>
+                            </div>
+                            <div class="">
+                                <span class="mb-2 font-bold block">6. ERP systems in use with their version and respective
+                                    databases</span>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-500">Reference Response</p>
+                                    <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
+                                        dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-gray-500">Response From Client</p>
+                                    <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
+                                        dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button type="button" onclick="openModal();"
+                                class="py-2 px-5 inline-flex justify-center items-center gap-2 rounded-md border border-emerald-400 bg-[#00cc83] text-white hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 transition-all text-sm sm:text-base">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="pills-on-gray-color-2" class="hidden" role="tabpanel"
+                    aria-labelledby="pills-on-gray-color-item-2">
+                    <div class="flex flex-wrap gap-3">
+                        <div class="flex items-center gap-4">
+                            <img src="./assets/images/user_pic.svg" alt="" class="w-20 h-20 rounded-full">
+                            <div>
+                                <p class="font-bold text-gray-500">Keshav Narayan</p>
+                                <p class="text-gray-400">Practice: <span class="font-bold text-gray-500">UI/UX</span></p>
+                                <p class="text-gray-400">TMC: <span class="font-bold text-gray-500">17465</span></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <img src="./assets/images/user_pic.svg" alt="" class="w-20 h-20 rounded-full">
+                            <div>
+                                <p class="font-bold text-gray-500">Keshav Narayan</p>
+                                <p class="text-gray-400">Practice: <span class="font-bold text-gray-500">UI/UX</span></p>
+                                <p class="text-gray-400">TMC: <span class="font-bold text-gray-500">17465</span></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <img src="./assets/images/user_pic.svg" alt="" class="w-20 h-20 rounded-full">
+                            <div>
+                                <p class="font-bold text-gray-500">Keshav Narayan</p>
+                                <p class="text-gray-400">Practice: <span class="font-bold text-gray-500">UI/UX</span></p>
+                                <p class="text-gray-400">TMC: <span class="font-bold text-gray-500">17465</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pills-on-gray-color-3" class="hidden" role="tabpanel"
+                    aria-labelledby="pills-on-gray-color-item-3">
+                    <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C] mb-6">Contract Billing</h2>
+                    <div class="flex flex-col">
+                        <div class="-m-1.5 overflow-x-auto">
+                            <div class="p-1.5 min-w-full inline-block align-middle">
+                                <div class="border rounded-lg overflow-hidden">
+                                    <table class="min-w-full divide-y divide-gray-200">
+                                        <thead class="bg-gray-50">
+                                            <tr>
+                                                <th scope="col"
+                                                    class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                                    TMC ID</th>
+                                                <th scope="col"
+                                                    class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                                    Employee</th>
+                                                <th scope="col"
+                                                    class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                                    Jan</th>
+                                                <th scope="col"
+                                                    class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                                    Feb</th>
+                                                <th scope="col"
+                                                    class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                                    March</th>
+                                                <th scope="col"
+                                                    class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                                    April</th>
+                                                <th scope="col"
+                                                    class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                                    May</th>
+                                                <th scope="col"
+                                                    class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                                    June</th>
+                                                <th scope="col"
+                                                    class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                                    July</th>
+                                                <th scope="col"
+                                                    class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                                    Aug</th>
+                                                <th scope="col"
+                                                    class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                                    Sept</th>
+                                                <th scope="col"
+                                                    class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                                    Oct</th>
+                                                <th scope="col"
+                                                    class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                                    Nov</th>
+                                                <th scope="col"
+                                                    class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                                    Dec</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-gray-200">
+                                            <tr>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">17461
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                                                    <p>Keshav Narayan</p>
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                                                    <input type="text" class="text-center border-transparent p-1 mb-1 rounded" value="454.00"  style="width: 5rem;" />
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                                                    <input type="text" class="text-center border-transparent p-1 mb-1 rounded" value="454.00"  style="width: 5rem;" />
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                                                    <input type="text" class="text-center border-transparent p-1 mb-1 rounded" value="454.00"  style="width: 5rem;" />
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                                                    <input type="text" class="text-center border-transparent p-1 mb-1 rounded" value="454.00"  style="width: 5rem;" />
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                                                    <input type="text" class="text-center border-transparent p-1 mb-1 rounded" value="454.00"  style="width: 5rem;" />
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                                                    <input type="text" class="text-center border-transparent p-1 mb-1 rounded" value="454.00"  style="width: 5rem;" />
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                                                    <input type="text" class="text-center border-transparent p-1 mb-1 rounded" value="454.00"  style="width: 5rem;" />
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                                                    <input type="text" class="text-center border-transparent p-1 mb-1 rounded" value="454.00"  style="width: 5rem;" />
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                                                    <input type="text" class="text-center border-transparent p-1 mb-1 rounded" value="454.00"  style="width: 5rem;" />
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                                                    <input type="text" class="text-center border-transparent p-1 mb-1 rounded" value="454.00"  style="width: 5rem;" />
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                                                    <input type="text" class="text-center border-transparent p-1 mb-1 rounded" value="454.00"  style="width: 5rem;" />
+                                                </td>
+                                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                                                    <input type="text" class="text-center border-transparent p-1 mb-1 rounded" value="454.00"  style="width: 5rem;" />
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </form>
+        </div>
+        
     </div>
     <div id="hs-overlay-right"
         class="hs-overlay hs-overlay-open:translate-x-0 hidden translate-x-full fixed top-0 right-0 transition-all duration-300 transform h-full max-w-xs w-full w-full z-[60] bg-white border-l hidden flex flex-col"
