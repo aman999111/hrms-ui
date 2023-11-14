@@ -421,3 +421,12 @@ input.is-invalid {
 .ss-option {
     @apply hover:!bg-emerald-400;
 }
+
+.note-editor {
+    width: 100%;
+}
+
+.note-toolbar,
+.note-statusbar {
+    background-color: #fff !important;
+}
