@@ -268,8 +268,18 @@
                             </div>
                             <div class="mb-4">
                                 <div class="flex items-center gap-4 flex-wrap justify-between mb-2">
-                                    <div>
+                                    <div class="flex items-center gap-2">
                                         <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C]">Attachments</h2>
+                                        <div class="hs-tooltip inline-block [--trigger:click]">
+                                            <a class="hs-tooltip-toggle block text-center" href="javascript:;">
+                                              <span class="w-10 h-10 inline-flex justify-center items-center gap-2 rounded-md bg-gray-50 border border-transparent text-gray-600 hover:bg-emerald-50 hover:border-emerald-200 hover:text-emerald-600">
+                                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11 17h2v-6h-2v6Zm1-8q.425 0 .713-.288T13 8q0-.425-.288-.713T12 7q-.425 0-.713.288T11 8q0 .425.288.713T12 9Zm0 13q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.137T12 2q2.075 0 3.9.788t3.175 2.137q1.35 1.35 2.138 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.138T12 22Zm0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20Zm0-8Z"/></svg>
+                                              </span>
+                                              <div class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-3 px-4 bg-white border text-sm text-gray-600 rounded-md shadow-md" role="tooltip">
+                                                Rejection info
+                                              </div>
+                                            </a>
+                                          </div>
                                     </div>
                                     <div class="flex items-center gap-4">
                                         <div>
@@ -289,19 +299,19 @@
                                 <div class="flex items-center gap-4 flex-wrap">
                                     <div class="relative group">
                                         <p class="text-blue-500 underline cursor-pointer" onclick="showPreview();">Email/Messages</p>
-                                        <button class="p-1 absolute right-0 top-0 rounded-full bg-black hover:bg-red-600 translate-x-[50%] translate-y-[-50%] hidden group-hover:block">
+                                        <button onclick="removeFile(1);" class="p-1 absolute right-0 top-0 rounded-full bg-black hover:bg-red-600 translate-x-[50%] translate-y-[-50%] hidden group-hover:block">
                                             <svg class="w-3 h-3 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z"/></svg>
                                         </button>
                                     </div>
                                     <div class="relative group">
                                         <p class="text-blue-500 underline cursor-pointer">PO</p>
-                                        <button class="p-1 absolute right-0 top-0 rounded-full bg-black hover:bg-red-600 translate-x-[50%] translate-y-[-50%] hidden group-hover:block">
+                                        <button onclick="removeFile(3);" class="p-1 absolute right-0 top-0 rounded-full bg-black hover:bg-red-600 translate-x-[50%] translate-y-[-50%] hidden group-hover:block">
                                             <svg class="w-3 h-3 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z"/></svg>
                                         </button>
                                     </div>
                                     <div class="relative group">
                                         <p class="text-blue-500 underline cursor-pointer">Proposal</p>
-                                        <button class="p-1 absolute right-0 top-0 rounded-full bg-black hover:bg-red-600 translate-x-[50%] translate-y-[-50%] hidden group-hover:block">
+                                        <button onclick="removeFile(2);" class="p-1 absolute right-0 top-0 rounded-full bg-black hover:bg-red-600 translate-x-[50%] translate-y-[-50%] hidden group-hover:block">
                                             <svg class="w-3 h-3 text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6L6.4 19Z"/></svg>
                                         </button>
                                     </div>
@@ -1149,6 +1159,10 @@
             if(type === '1') {
 
             }
+        }
+
+        function removeFile(fileInput) {
+            
         }
     </script>
 </body>
