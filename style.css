@@ -363,6 +363,45 @@ input.is-invalid {
     .open-mobile-sidebar {
         display: inline-flex;
     }
+
+    .resizable-panel {
+        margin-left: 0 !important;
+    }
+}
+
+.checklist-wrapper input[type="checkbox"]{
+    display: none;
+}
+
+.checklist-wrapper.edit-mode input[type="checkbox"]{
+    display: block;
+}
+
+.checklist-wrapper .additional-information {
+    display: none;
+}
+
+.checklist-wrapper.edit-mode .additional-information {
+    display: block;
+}
+
+.checklist-wrapper .assign-btn,
+.checklist-wrapper .reject-btn {
+    display: block;
+}
+
+.checklist-wrapper .submit-reject-btn,
+.checklist-wrapper .cancel-reject-btn {
+    display: none;
+}
+.checklist-wrapper.edit-mode .assign-btn,
+.checklist-wrapper.edit-mode .reject-btn {
+    display: none;
+}
+
+.checklist-wrapper.edit-mode .submit-reject-btn,
+.checklist-wrapper.edit-mode .cancel-reject-btn {
+    display: block;
 }
 
 .dh-checklist-fill textarea {
@@ -429,4 +468,9 @@ input.is-invalid {
 .note-toolbar,
 .note-statusbar {
     background-color: #fff !important;
+}
+
+.resizable-panel {
+    @apply ml-[13rem] xl:ml-[16.5rem] 2xl:ml-[17rem];
+    width: 100%;
 }

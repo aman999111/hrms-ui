@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet">
+    </link>
     <link rel="stylesheet" href="./dist/output.css">
     <!-- <link rel="stylesheet" href="style2.css"> -->
 </head>
@@ -208,392 +210,210 @@
             </div>
         </div>
     </div>
-    <div class="main overflow-y-auto relative">
-        <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C]">Deploy Resources</h2>
-        <p>Deploy Resources Check & Edit Their Current Status</p>
-        <div class="bg-[#fafafa] rounded p-4 flex items-center flex-wrap sm:justify-between gap-y-4 gap-x-6">
+    <div class="main overflow-y-auto">
+        <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C]">Action Centre</h2>
+        <p>Review the contract details to Approve , Assign or Reject the contract</p>
+        <div class="flex items-center gap-4 flex-wrap mt-4">
             <div>
-                <p class="font-bold mb-2">Costing Sheet</p>
-                <p class="mb-1">Total Required Resources <span class="font-bold">04</span> </p>
-                <p class="mb-1">Required Skill <span class="font-bold">02</span> </p>
+                <p>Sent On</p>
+                <p class="font-bold">11/09/2022</p>
             </div>
             <div>
-                <p class="font-bold mb-2">Skills</p>
-                <p class="mb-1">Automation</p>
-                <p class="mb-1">Development</p>
-                <p class="mb-1">Power BI</p>
-            </div>
-            <div>
-                <p class="font-bold mb-2">Experience</p>
-                <p class="mb-1">2 years</p>
-                <p class="mb-1">3 years</p>
-                <p class="mb-1">0-1 years</p>
-            </div>
-            <div>
-                <p class="font-bold mb-2">No. of Resources</p>
-                <p class="mb-1">02</p>
-                <p class="mb-1">03</p>
-                <p class="mb-1">01</p>
-            </div>
-            <div>
-                <p class="font-bold mb-2">Cost Per Skill</p>
-                <p class="mb-1">2 years</p>
-                <p class="mb-1">3 years</p>
-                <p class="mb-1">0-1 years</p>
-            </div>
-            <div>
-                <p class="font-bold mb-2">Action</p>
-                <p class="mb-1">2 years</p>
-                <p class="mb-1">3 years</p>
-                <p class="mb-1">0-1 years</p>
-            </div>
-            <div>
-                <p class="font-bold mb-2">Status</p>
-                <p class="mb-1">2 years</p>
-                <p class="mb-1">Pending</p>
-                <p class="mb-1">Pending</p>
+                <p>Created By</p>
+                <p class="font-bold">Keshav Narayan</p>
             </div>
         </div>
-        <div class="flex flex-col">
-            <div class="-m-1.5 overflow-x-auto">
-                <div class="p-1.5 min-w-full inline-block align-middle">
-                    <div class="overflow-hidden">
-                        <table id="datatable" class="min-w-full divide-y divide-gray-200">
-                            <thead>
-                                <tr>
-                                    <th scope="col" class="pl-6 pr-2 py-3 text-left">
-                                        <label for="hs-at-with-checkboxes-main" class="flex">
-                                            <input type="checkbox"
-                                                class="shrink-0 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500"
-                                                id="hs-at-with-checkboxes-main">
-                                            <span class="sr-only">Checkbox</span>
-                                        </label>
-                                    </th>
-                                    <th scope="col"
-                                        class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                        TMC ID</th>
-                                    <th scope="col"
-                                        class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                        Employees</th>
-                                    <th scope="col"
-                                        class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                        Skills</th>
-                                    <th scope="col"
-                                        class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                        Current Month</th>
-                                    <th scope="col"
-                                        class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                        Location</th>
-                                    <th scope="col"
-                                        class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                        Delivery Anchor</th>
-                                    <th scope="col"
-                                        class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                        Status</th>
-                                    <th scope="col"
-                                        class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                        Action</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-200">
-                                <tr>
-                                    <td class="h-px w-px whitespace-nowrap">
-                                        <div class="pl-6 py-3">
-                                            <label for="hs-at-with-checkboxes-1" class="flex">
-                                                <input type="checkbox"
-                                                    class="shrink-0 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500"
-                                                    id="hs-at-with-checkboxes-1">
-                                                <span class="sr-only">Checkbox</span>
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">
-                                        17465</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Keshav Narayan
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Data Analytics</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Project 1</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">October
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Abhishek Pansotra
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
-                                        <span class="status overrun">Overrun</span>
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-
-                                        <div class="hs-dropdown relative inline-flex">
-                                            <!-- <button id="hs-dropdown-default" type="button" class="hs-dropdown-toggle py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                              Actions
-                                              <svg class="hs-dropdown-open:rotate-180 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-                                            </button> -->
-                                            <button type="button"
-                                                class="group py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent bg-white text-emerald-500 hover:bg-emerald-500 hover:text-white">
-                                                <div
-                                                    class="w-6 h-6 bg-emerald-500 rounded-full group-hover:bg-white flex items-center justify-center">
-                                                    <svg class="w-4 h-4 text-white group-hover:text-emerald-500"
-                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                        viewBox="0 0 24 24">
-                                                        <path fill="currentColor"
-                                                            d="m21.1 12.5l1.4 1.41l-6.53 6.59L12.5 17l1.4-1.41l2.07 2.08l5.13-5.17M10 17l3 3H3v-2c0-2.21 3.58-4 8-4l1.89.11L10 17m1-13a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4Z" />
-                                                    </svg>
-                                                </div>
-                                                Deploy
-                                            </button>
-                                            <div class="z-30 hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-[15rem] bg-white shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
-                                                aria-labelledby="hs-dropdown-default">
-                                                <div class="bg-[#fafafa] p-3">
-                                                    <div class="bg-white rounded p-2">
-                                                        <p class="font-bold mb-1">Contract Timeline</p>
-                                                        <p>12/11/2023 - 12/11/2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="p-3 flex items-center gap-4">
-                                                    <div>
-                                                        <label for="from">From</label>
-                                                        <input type="date" id="from" class="k-input">
-                                                    </div>
-                                                    <div>
-                                                        <label for="to">To</label>
-                                                        <input type="date" id="to" class="k-input">
-                                                    </div>
-                                                    <div>
-                                                        <p class="font-bold">Duration</p>
-                                                        <p class="font-bold">7 Months 18 Days</p>
-                                                    </div>
-                                                </div>
-                                                <div class="flex items-center justify-center p-4">
-                                                    <button class="font-medium text-emerald-500 underline">Deploy
-                                                        Employee</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="h-px w-px whitespace-nowrap">
-                                        <div class="pl-6 py-3">
-                                            <label for="hs-at-with-checkboxes-1" class="flex">
-                                                <input type="checkbox"
-                                                    class="shrink-0 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500"
-                                                    id="hs-at-with-checkboxes-1">
-                                                <span class="sr-only">Checkbox</span>
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">
-                                        17465</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Keshav Narayan
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Data Analytics</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Project 1</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">October
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Abhishek Pansotra
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
-                                        <span class="status onbench">On Bench</span>
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                        <div class="hs-dropdown relative inline-flex">
-                                            <!-- <button id="hs-dropdown-default" type="button" class="hs-dropdown-toggle py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                              Actions
-                                              <svg class="hs-dropdown-open:rotate-180 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-                                            </button> -->
-                                            <button type="button"
-                                                class="group py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent bg-white text-emerald-500 hover:bg-emerald-500 hover:text-white">
-                                                <div
-                                                    class="w-6 h-6 bg-emerald-500 rounded-full group-hover:bg-white flex items-center justify-center">
-                                                    <svg class="w-4 h-4 text-white group-hover:text-emerald-500"
-                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                        viewBox="0 0 24 24">
-                                                        <path fill="currentColor"
-                                                            d="m21.1 12.5l1.4 1.41l-6.53 6.59L12.5 17l1.4-1.41l2.07 2.08l5.13-5.17M10 17l3 3H3v-2c0-2.21 3.58-4 8-4l1.89.11L10 17m1-13a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4Z" />
-                                                    </svg>
-                                                </div>
-                                                Deploy
-                                            </button>
-                                            <div class="z-30 hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-[15rem] bg-white shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
-                                                aria-labelledby="hs-dropdown-default">
-                                                <div class="bg-[#fafafa] p-3">
-                                                    <div class="bg-white rounded p-2">
-                                                        <p class="font-bold mb-1">Contract Timeline</p>
-                                                        <p>12/11/2023 - 12/11/2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="p-3 flex items-center gap-4">
-                                                    <div>
-                                                        <label for="from">From</label>
-                                                        <input type="date" id="from" class="k-input">
-                                                    </div>
-                                                    <div>
-                                                        <label for="to">To</label>
-                                                        <input type="date" id="to" class="k-input">
-                                                    </div>
-                                                    <div>
-                                                        <p class="font-bold">Duration</p>
-                                                        <p class="font-bold">7 Months 18 Days</p>
-                                                    </div>
-                                                </div>
-                                                <div class="flex items-center justify-center p-4">
-                                                    <button class="font-medium text-emerald-500 underline">Deploy
-                                                        Employee</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="h-px w-px whitespace-nowrap">
-                                        <div class="pl-6 py-3">
-                                            <label for="hs-at-with-checkboxes-1" class="flex">
-                                                <input type="checkbox"
-                                                    class="shrink-0 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500"
-                                                    id="hs-at-with-checkboxes-1">
-                                                <span class="sr-only">Checkbox</span>
-                                            </label>
-                                        </div>
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">
-                                        17465</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Keshav Narayan
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Data Analytics</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Project 1</td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">October
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Abhishek Pansotra
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
-                                        <span class="status deployed">Deployed</span>
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                        <div class="hs-dropdown relative inline-flex">
-                                            <!-- <button id="hs-dropdown-default" type="button" class="hs-dropdown-toggle py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                                              Actions
-                                              <svg class="hs-dropdown-open:rotate-180 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-                                            </button> -->
-                                            <button type="button"
-                                                class="group py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent bg-white text-emerald-500 hover:bg-emerald-500 hover:text-white">
-                                                <div
-                                                    class="w-6 h-6 bg-emerald-500 rounded-full group-hover:bg-white flex items-center justify-center">
-                                                    <svg class="w-4 h-4 text-white group-hover:text-emerald-500"
-                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                        viewBox="0 0 24 24">
-                                                        <path fill="currentColor"
-                                                            d="m21.1 12.5l1.4 1.41l-6.53 6.59L12.5 17l1.4-1.41l2.07 2.08l5.13-5.17M10 17l3 3H3v-2c0-2.21 3.58-4 8-4l1.89.11L10 17m1-13a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4Z" />
-                                                    </svg>
-                                                </div>
-                                                Deploy
-                                            </button>
-                                            <div class="z-30 hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-[15rem] bg-white shadow-md rounded-lg mt-2 after:h-4 after:absolute after:-bottom-4 after:start-0 after:w-full before:h-4 before:absolute before:-top-4 before:start-0 before:w-full"
-                                                aria-labelledby="hs-dropdown-default">
-                                                <div class="bg-[#fafafa] p-3">
-                                                    <div class="bg-white rounded p-2">
-                                                        <p class="font-bold mb-1">Contract Timeline</p>
-                                                        <p>12/11/2023 - 12/11/2024</p>
-                                                    </div>
-                                                </div>
-                                                <div class="p-3 flex items-center gap-4">
-                                                    <div>
-                                                        <label for="from">From</label>
-                                                        <input type="date" id="from" class="k-input">
-                                                    </div>
-                                                    <div>
-                                                        <label for="to">To</label>
-                                                        <input type="date" id="to" class="k-input">
-                                                    </div>
-                                                    <div>
-                                                        <p class="font-bold">Duration</p>
-                                                        <p class="font-bold">7 Months 18 Days</p>
-                                                    </div>
-                                                </div>
-                                                <div class="flex items-center justify-center p-4">
-                                                    <button class="font-medium text-emerald-500 underline">Deploy
-                                                        Employee</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+        <div class="bg-[#f9f9f9] p-4 rounded-md mt-4 mb-6">
+            <div class="bg-white rounded p-4 mb-4">
+                <p class="text-base 2xl:text-lg font-bold text-gray-600 mb-4">OAF Details</p>
+                <div class="grid grid-cols-1 sm:grid-cols-6 sm:flex-row gap-4 mb-4">
+                    <div class="col-span-1 sm:col-span-2">
+                        <p class="font-medium">Order Description</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptatem facilis amet
+                            pariatur doloribus voluptatibus et fuga, assumenda magnam error inventore quis labore, enim
+                            nisi molestiae, hic nobis aliquam nihil?</p>
+                    </div>
+                    <div>
+                        <p class="font-medium text-left sm:text-center">PO Number</p>
+                        <p class="font-bold text-left sm:text-center">989-343-34</p>
+                    </div>
+                    <div>
+                        <p class="font-medium text-left sm:text-center">PO Value</p>
+                        <p class="font-bold text-left sm:text-center">4.50 L</p>
+                    </div>
+                    <div class="col-span-1 sm:col-span-2">
+                        <p class="font-medium">PO Terms & Conditions</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptatem facilis amet
+                            pariatur doloribus voluptatibus et fuga, assumenda magnam error inventore quis labore, enim
+                            nisi molestiae, hic nobis aliquam nihil?</p>
+                    </div>
+                </div>
+                <p class="text-base 2xl:text-lg font-bold text-gray-600 mb-4">Attachments</p>
+                <div class="flex items-center gap-4 mb-4">
+                    <p>Total: 03</p>
+                    <a href="#" class="text-blue-500 underline">Email & Mesages</a>
+                    <a href="#" class="text-blue-500 underline">Proposal</a>
+                    <a href="#" class="text-blue-500 underline">PO</a>
+                </div>
+                <div class="flex items-center flex-wrap mb-4">
+                    <div class="flex items-center gap-2 border-r pr-3">
+                        <div
+                            class="logo w-10 h-10 bg-white rounded-full overflow-hidden flex items-center justify-center">
+                            <img class="w-8 h-8 rounded-full object-cover" src="./assets/images/google-logo.svg" alt="">
+                        </div>
+                        <div>
+                            <p class="text-[.625rem]">Customer</p>
+                            <p class="font-bold">Google</p>
+                        </div>
+                    </div>
+                    <div class="flex pl-3 items-center gap-4">
+                        <div>
+                            <div>
+                                <span class="text-sm">Email Id</span>
+                            </div>
+                            <p class="text-sm">test@gmail.com</p>
+                        </div>
+                        <div>
+                            <div>
+                                <span class="text-sm">Phone No</span>
+                            </div>
+                            <p class="text-sm">+1234567890</p>
+                        </div>
+                        <div>
+                            <div>
+                                <span class="text-sm">Location</span>
+                            </div>
+                            <p class="text-sm">2300+ mayor street, MI 2432 USA</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="resizable-panel overflow-x-auto bg-white p-4 rounded-t-xl absolute bottom-0 left-0 right-0 min-h-[10rem] border">
-            <div class="w-10 bg-gray-600 inline-flex items-center justify-center absolute top-0 left-0 right-0 mx-auto">
-                <svg class="text-white w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M8 18h3v-3H2v-2h20v2h-9v3h3l-4 4l-4-4m4-16L8 6h3v3H2v2h20V9h-9V6h3l-4-4Z"/></svg>
+            <p class="text-base 2xl:text-lg font-bold text-gray-600 mb-4">Project Details</p>
+            <div class="flex overflow-x-auto gap-x-8 gap-y-4 mb-4">
+                <div>
+                    <p class="text-sm 2xl:text-base font-medium">Customer</p>
+                    <p class="text-sm 2xl:text-base">Google</p>
+                </div>
+                <div>
+                    <p class="text-sm 2xl:text-base font-medium">Project Name</p>
+                    <p class="text-sm 2xl:text-base">Super Project One</p>
+                </div>
+                <div>
+                    <p class="text-sm 2xl:text-base font-medium">Project Model</p>
+                    <p class="text-sm 2xl:text-base">Lorem, ipsum.</p>
+                </div>
+                <div>
+                    <p class="text-sm 2xl:text-base font-medium">Project Type</p>
+                    <p class="text-sm 2xl:text-base">Fixed</p>
+                </div>
+                <div>
+                    <p class="text-sm 2xl:text-base font-medium">Practices</p>
+                    <p class="text-sm 2xl:text-base">Automation</p>
+                </div>
+                <div>
+                    <p class="text-sm 2xl:text-base font-medium">Sub-Practices</p>
+                    <p class="text-sm 2xl:text-base">Power BI</p>
+                </div>
             </div>
             <div class="mb-4">
-                <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C]">Deploy Resources</h2>
-                <p>Deploy Resources Check & Edit Their Current Status</p>
+                <p class="text-sm 2xl:text-base font-medium">Project Description</p>
+                <p class="text-sm 2xl:text-base">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque,
+                    iusto rem quam accusamus fugit ducimus.</p>
+                <p class="text-sm 2xl:text-base">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque,
+                    iusto rem quam accusamus fugit ducimus.</p>
             </div>
+            <p class="text-base 2xl:text-lg font-bold text-gray-600 mb-4">Contract Details</p>
+            <div class="flex overflow-x-auto gap-x-8 gap-y-4 mb-4">
+                <div>
+                    <p class="text-sm 2xl:text-base font-medium">Contract Number</p>
+                    <p class="text-sm 2xl:text-base">2424242424</p>
+                </div>
+                <div>
+                    <p class="text-sm 2xl:text-base font-medium">Contract Start Date</p>
+                    <p class="text-sm 2xl:text-base">11/11/2023</p>
+                </div>
+                <div>
+                    <p class="text-sm 2xl:text-base font-medium">Contract End Date</p>
+                    <p class="text-sm 2xl:text-base">11/11/2024</p>
+                </div>
+                <div>
+                    <p class="text-sm 2xl:text-base font-medium">Client Coordinator</p>
+                    <p class="text-sm 2xl:text-base">Keshav Narayan</p>
+                </div>
+            </div>
+            <div class="mb-4">
+                <p class="text-sm 2xl:text-base font-medium">Milestones</p>
+                <p class="text-sm 2xl:text-base">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque,
+                    iusto rem quam accusamus fugit ducimus.</p>
+            </div>
+        </div>
+
+        <div class="my-4">
             <div class="flex flex-col">
                 <div class="-m-1.5 overflow-x-auto">
                     <div class="p-1.5 min-w-full inline-block align-middle">
-                        <div class="overflow-hidden">
-                            <table id="datatable" class="min-w-full divide-y divide-gray-200">
-                                <thead>
+                        <div class="border rounded-lg overflow-hidden">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
                                     <tr>
                                         <th scope="col"
-                                            class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                            TMC ID</th>
+                                            class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                            Costing Sheet</th>
                                         <th scope="col"
-                                            class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                            Employees</th>
+                                            class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                            Skills</th>
                                         <th scope="col"
-                                            class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                            Status</th>
+                                            class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                            Experience</th>
                                         <th scope="col"
-                                            class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                            Customer</th>
+                                            class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                            No. of Resources</th>
                                         <th scope="col"
-                                            class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                            Project Name</th>
-                                        <th scope="col"
-                                            class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                            Contract Number</th>
-                                        <th scope="col"
-                                            class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                            Deployed From</th>
-                                        <th scope="col"
-                                            class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                            Deployed To</th>
-                                        <th scope="col"
-                                            class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                            Project Type</th>
-                                        <th scope="col"
-                                            class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                            Practices</th>
+                                            class="px-6 py-3 text-left text-sm font-bold whitespace-nowrap text-gray-600 uppercase">
+                                            Cost Per Skill</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-gray-200">
                                     <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">
-                                            17465</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Keshav Narayan
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
-                                            <span class="status deployed">Deployed</span>
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Google</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Project Name 1</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
-                                            9849328749247
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
-                                            23/10/2024
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
-                                            23/10/2024
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
-                                            Fixed
-                                        </td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                            Automation
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">Total
+                                            Required Resource: <span class="font-bold">04</span></td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">Automation</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">2 Years</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">01</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">50K</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">
+                                            Required Skills: <span class="font-bold">05</span></td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">Development</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">3 Years</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">02</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">30K</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800"></td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">Power BI</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">0-1 Years</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">01</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">530K</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800"></td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">UI/UX Design</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">5 Years</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">5</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">330K</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800"></td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800"></td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">Total Cost:</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-800">940K
                                         </td>
                                     </tr>
                                 </tbody>
@@ -601,6 +421,132 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <p class="text-base 2xl:text-lg font-bold text-gray-600 mb-4">Lines Info</p>
+        <div class="flex flex-col">
+            <div class="-m-1.5 overflow-x-auto">
+                <div class="p-1.5 min-w-full inline-block align-middle">
+                    <div class="overflow-hidden">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead>
+                                <tr>
+                                    <th scope="col"
+                                        class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
+                                        Line No</th>
+                                    <th scope="col"
+                                        class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
+                                        Line Description 1</th>
+                                    <th scope="col"
+                                        class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
+                                        Line Description 2</th>
+                                    <th scope="col"
+                                        class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
+                                        Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">
+                                        01</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800 ">Lorem ipsum dolor sit amet.
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-gray-800 ">Lorem ipsum dolor sit amet.
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1000000</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">
+                                        02</td>
+                                    <td class="px-6 py-4 text-sm text-gray-800 ">Lorem ipsum dolor sit amet consectetur,
+                                        adipisicing elit. Earum, vel.
+                                    </td>
+                                    <td class="px-6 py-4 text-sm text-gray-800 ">Lorem, ipsum dolor sit amet consectetur
+                                        adipisicing elit. Omnis, ipsa.
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1000000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C] mb-6">Pre Sales Checklist</h2>
+        <div class="checklist-wrapper">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <div class="dh-checklist-fill">
+                    <div class="flex items-center gap-2 mb-2">
+                        <div class="flex">
+                            <input type="checkbox"
+                                class="shrink-0 border-gray-200 rounded text-emerald-600 focus:ring-emerald-500"
+                                id="hs-checkbox-group-4">
+                        </div>
+                        <span class="font-bold block">1. ERP systems in use with their version and respective
+                            databases</span>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-500">Response From Client</p>
+                        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
+                            dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                    </div>
+                    <textarea class="k-input w-full mt-4" name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="">
+                    <span class="mb-2 font-bold block">2. ERP systems in use with their version and respective
+                        databases</span>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-500">Response From Client</p>
+                        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
+                            dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                    </div>
+                </div>
+                <div class="">
+                    <span class="mb-2 font-bold block">3. ERP systems in use with their version and respective
+                        databases</span>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-500">Response From Client</p>
+                        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
+                            dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                    </div>
+                </div>
+                <div class="">
+                    <span class="mb-2 font-bold block">4. ERP systems in use with their version and respective
+                        databases</span>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-500">Response From Client</p>
+                        <p class="text-sm text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Aliquid alias nobis magni itaque provident, unde quia, at quae deserunt repellat temporibus
+                            dolor esse labore culpa hic laboriosam nam officia dolorem.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4 additional-information">
+                <p class="font-bold text-xl mb-2">Additional Information</p>
+                <textarea class="k-input w-full" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="flex items-center gap-4">
+                <button data-hs-overlay="#hs-medium-modal" type="button"
+                    class="assign-btn py-2 px-5 inline-flex justify-center items-center gap-2 rounded-md border border-emerald-400 bg-[#00cc83] text-white hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 transition-all text-sm sm:text-base">
+                    Approve & Assign DA
+                </button>
+                <button type="button" onclick="this.closest('.checklist-wrapper').classList.add('edit-mode');"
+                    class="reject-btn py-2 px-5 inline-flex justify-center items-center gap-2 rounded-md border border-black bg-white text-black hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all text-sm sm:text-base">
+                    Reject
+                </button>
+                <button data-hs-overlay="#hs-reject-modal" type="button"
+                    class="submit-reject-btn py-2 px-5 inline-flex justify-center items-center gap-2 rounded-md border border-black bg-white text-black hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all text-sm sm:text-base">
+                    Submit
+                </button>
+                <button type="button" onclick="this.closest('.checklist-wrapper').classList.remove('edit-mode');"
+                    class="cancel-reject-btn py-2 px-5 inline-flex justify-center items-center gap-2 rounded-md border border-black bg-white text-black hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all text-sm sm:text-base">
+                    Cancel
+                </button>
             </div>
         </div>
     </div>
@@ -819,7 +765,238 @@
             </button>
         </div>
     </div>
-
+    <div id="hs-reject-modal"
+        class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
+        <div
+            class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all md:max-w-2xl md:w-full m-3 md:mx-auto">
+            <div class="flex flex-col bg-white border shadow-sm rounded-xl ">
+                <div class="flex justify-between items-center py-3 px-4 border-b">
+                    <div class="flex items-center gap-3">
+                        <svg class="w-10 h-10 text-red-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                            viewBox="0 0 32 32">
+                            <path fill="currentColor"
+                                d="M16 2C8.2 2 2 8.2 2 16s6.2 14 14 14s14-6.2 14-14S23.8 2 16 2zm5.4 21L16 17.6L10.6 23L9 21.4l5.4-5.4L9 10.6L10.6 9l5.4 5.4L21.4 9l1.6 1.6l-5.4 5.4l5.4 5.4l-1.6 1.6z" />
+                        </svg>
+                        <div>
+                            <p class="font-medium">Contract</p>
+                            <p class="font-bold text-xl">Rejected</p>
+                        </div>
+                    </div>
+                    <button type="button"
+                        class="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-sm"
+                        data-hs-overlay="#hs-reject-modal">
+                        <span class="sr-only">Close</span>
+                        <svg class="w-3.5 h-3.5" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.258206 1.00652C0.351976 0.912791 0.479126 0.860131 0.611706 0.860131C0.744296 0.860131 0.871447 0.912791 0.965207 1.00652L3.61171 3.65302L6.25822 1.00652C6.30432 0.958771 6.35952 0.920671 6.42052 0.894471C6.48152 0.868271 6.54712 0.854471 6.61352 0.853901C6.67992 0.853321 6.74572 0.865971 6.80722 0.891111C6.86862 0.916251 6.92442 0.953381 6.97142 1.00032C7.01832 1.04727 7.05552 1.1031 7.08062 1.16454C7.10572 1.22599 7.11842 1.29183 7.11782 1.35822C7.11722 1.42461 7.10342 1.49022 7.07722 1.55122C7.05102 1.61222 7.01292 1.6674 6.96522 1.71352L4.31871 4.36002L6.96522 7.00648C7.05632 7.10078 7.10672 7.22708 7.10552 7.35818C7.10442 7.48928 7.05182 7.61468 6.95912 7.70738C6.86642 7.80018 6.74102 7.85268 6.60992 7.85388C6.47882 7.85498 6.35252 7.80458 6.25822 7.71348L3.61171 5.06702L0.965207 7.71348C0.870907 7.80458 0.744606 7.85498 0.613506 7.85388C0.482406 7.85268 0.357007 7.80018 0.264297 7.70738C0.171597 7.61468 0.119017 7.48928 0.117877 7.35818C0.116737 7.22708 0.167126 7.10078 0.258206 7.00648L2.90471 4.36002L0.258206 1.71352C0.164476 1.61976 0.111816 1.4926 0.111816 1.36002C0.111816 1.22744 0.164476 1.10028 0.258206 1.00652Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-4 overflow-y-auto mb-3">
+                    <p class="font-bold">Reason</p>
+                    <p>Please Assign the contract to the delivery anchor</p>
+                    <form action="">
+                        <textarea class="k-input w-full my-4" name="rejection-reason" id="" cols="30"
+                            rows="10"></textarea>
+                        <div class="flex justify-center">
+                            <button type="button"
+                                class="py-2 px-5 inline-flex justify-center items-center gap-2 rounded-md border border-black bg-black text-white hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all text-sm sm:text-base">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="hs-medium-modal"
+        class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
+        <div
+            class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all md:max-w-4xl md:w-full m-3 md:mx-auto">
+            <div class="flex flex-col bg-white border shadow-sm rounded-xl ">
+                <div class="flex justify-between items-center py-3 px-4 border-b">
+                    <div class="flex items-center gap-3">
+                        <svg class="w-10 h-10 text-emerald-400" xmlns="http://www.w3.org/2000/svg" width="15"
+                            height="15" viewBox="0 0 15 15">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M0 7.5a7.5 7.5 0 1 1 15 0a7.5 7.5 0 0 1-15 0Zm7.072 3.21l4.318-5.398l-.78-.624l-3.682 4.601L4.32 7.116l-.64.768l3.392 2.827Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <div>
+                            <p class="font-medium">Contract</p>
+                            <p class="font-bold text-xl">Approved</p>
+                        </div>
+                    </div>
+                    <button type="button"
+                        class="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-sm"
+                        data-hs-overlay="#hs-medium-modal">
+                        <span class="sr-only">Close</span>
+                        <svg class="w-3.5 h-3.5" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.258206 1.00652C0.351976 0.912791 0.479126 0.860131 0.611706 0.860131C0.744296 0.860131 0.871447 0.912791 0.965207 1.00652L3.61171 3.65302L6.25822 1.00652C6.30432 0.958771 6.35952 0.920671 6.42052 0.894471C6.48152 0.868271 6.54712 0.854471 6.61352 0.853901C6.67992 0.853321 6.74572 0.865971 6.80722 0.891111C6.86862 0.916251 6.92442 0.953381 6.97142 1.00032C7.01832 1.04727 7.05552 1.1031 7.08062 1.16454C7.10572 1.22599 7.11842 1.29183 7.11782 1.35822C7.11722 1.42461 7.10342 1.49022 7.07722 1.55122C7.05102 1.61222 7.01292 1.6674 6.96522 1.71352L4.31871 4.36002L6.96522 7.00648C7.05632 7.10078 7.10672 7.22708 7.10552 7.35818C7.10442 7.48928 7.05182 7.61468 6.95912 7.70738C6.86642 7.80018 6.74102 7.85268 6.60992 7.85388C6.47882 7.85498 6.35252 7.80458 6.25822 7.71348L3.61171 5.06702L0.965207 7.71348C0.870907 7.80458 0.744606 7.85498 0.613506 7.85388C0.482406 7.85268 0.357007 7.80018 0.264297 7.70738C0.171597 7.61468 0.119017 7.48928 0.117877 7.35818C0.116737 7.22708 0.167126 7.10078 0.258206 7.00648L2.90471 4.36002L0.258206 1.71352C0.164476 1.61976 0.111816 1.4926 0.111816 1.36002C0.111816 1.22744 0.164476 1.10028 0.258206 1.00652Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-4 overflow-y-auto mb-3">
+                    <p class="font-bold">Assign</p>
+                    <p>Please Assign the contract to the delivery anchor</p>
+                    <div class="user-list-wrapper mt-4">
+                        <div>
+                            <select id="user-list" class="multi-select">
+                                <option value="1">Option</option>
+                                <option value="2">Option</option>
+                                <option value="3">Option</option>
+                                <option value="4">Option</option>
+                                <option value="5">Option</option>
+                            </select>
+                        </div>
+                        <div class="mt-4">
+                            <div class="hs-accordion-group">
+                                <div class="hs-accordion hs-accordion-active:border-gray-200 bg-white border border-transparent rounded-xl"
+                                    id="hs-active-bordered-heading-one">
+                                    <button
+                                        class="hs-accordion-toggle hs-accordion-active:text-blue-600 inline-flex justify-between items-center gap-x-3 w-full font-semibold text-start text-gray-800 py-4 px-5 hover:text-gray-500 disabled:opacity-50 disabled:pointer-events-none"
+                                        aria-controls="hs-basic-active-bordered-collapse-one">
+                                        <div class="flex items-center gap-4">
+                                            <img class="w-20 h-20 rounded-full" src="./assets/images/user_pic.svg" alt="User Pic">
+                                            <div>
+                                                <p class="font-bold text-base sm:text-xl">Keshav narayan</p>
+                                                <p class="text-gray-300 text-xs">Delivery Anchor</p>
+                                            </div>
+                                        </div>
+                                        <svg class="hs-accordion-active:hidden block w-3.5 h-3.5"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M5 12h14" />
+                                            <path d="M12 5v14" />
+                                        </svg>
+                                        <svg class="hs-accordion-active:block hidden w-3.5 h-3.5"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M5 12h14" />
+                                        </svg>
+                                    </button>
+                                    <div id="hs-basic-active-bordered-collapse-one"
+                                        class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                                        aria-labelledby="hs-active-bordered-heading-one">
+                                        <div class="flex items-center gap-4 justify-between flex-wrap px-4 pb-4">
+                                            <p>TMC: <span class="font-bold">17465</span></p>
+                                            <p>Date of Joining: <span class="font-bold">11/11/2024</span></p>
+                                            <p>Department: <span class="font-bold">TDE</span></p>
+                                            <p>Location: <span class="font-bold">Delhi</span></p>
+                                        </div>
+                                        <div class="pb-4 px-5">
+                                            <p class="font-bold mb-4 text-xl">Projects</p>
+                                            <div class="flex flex-col">
+                                                <div class="-m-1.5 overflow-x-auto">
+                                                    <div class="p-1.5 min-w-full inline-block align-middle">
+                                                        <div class="overflow-hidden">
+                                                            <table class="min-w-full divide-y divide-gray-200">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col"
+                                                                            class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
+                                                                            Current Projects</th>
+                                                                        <th scope="col"
+                                                                            class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
+                                                                            Project Start Date</th>
+                                                                        <th scope="col"
+                                                                            class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
+                                                                            Customer</th>
+                                                                        <th scope="col"
+                                                                            class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
+                                                                            Costing</th>
+                                                                        <th scope="col"
+                                                                            class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
+                                                                            Practices</th>
+                                                                        <th scope="col"
+                                                                            class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
+                                                                            Project Type</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody class="divide-y divide-gray-200">
+                                                                    <tr>
+                                                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">
+                                                                            Project 1</td>
+                                                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                                                        </td>
+                                                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                                                        </td>
+                                                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">
+                                                                            Project 2</td>
+                                                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                                                        </td>
+                                                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                                                        </td>
+                                                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Fixed
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center mt-4">
+                            <button data-hs-overlay="#hs-success-modal" type="button"
+                                class="py-2 px-5 inline-flex justify-center items-center gap-2 rounded-md border border-emerald-400 bg-[#00cc83] text-white hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 transition-all text-sm sm:text-base">
+                                Assign
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="hs-success-modal"
+        class="hs-overlay hidden w-full h-full fixed top-0 left-0 z-[60] overflow-x-hidden overflow-y-auto">
+        <div
+            class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all md:max-w-2xl md:w-full m-3 md:mx-auto">
+            <div
+                class="flex flex-col bg-white border shadow-sm rounded-xl ">
+                <div class="flex justify-between items-center py-3 px-4 ">
+                    <h3 class="font-bold ">
+                        <!-- Modal title -->
+                    </h3>
+                    <button type="button"
+                        class="hs-dropdown-toggle inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-md text-gray-500 hover:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-white transition-all text-sm"
+                        data-hs-overlay="#hs-success-modal">
+                        <span class="sr-only">Close</span>
+                        <svg class="w-3.5 h-3.5" width="8" height="8" viewBox="0 0 8 8" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.258206 1.00652C0.351976 0.912791 0.479126 0.860131 0.611706 0.860131C0.744296 0.860131 0.871447 0.912791 0.965207 1.00652L3.61171 3.65302L6.25822 1.00652C6.30432 0.958771 6.35952 0.920671 6.42052 0.894471C6.48152 0.868271 6.54712 0.854471 6.61352 0.853901C6.67992 0.853321 6.74572 0.865971 6.80722 0.891111C6.86862 0.916251 6.92442 0.953381 6.97142 1.00032C7.01832 1.04727 7.05552 1.1031 7.08062 1.16454C7.10572 1.22599 7.11842 1.29183 7.11782 1.35822C7.11722 1.42461 7.10342 1.49022 7.07722 1.55122C7.05102 1.61222 7.01292 1.6674 6.96522 1.71352L4.31871 4.36002L6.96522 7.00648C7.05632 7.10078 7.10672 7.22708 7.10552 7.35818C7.10442 7.48928 7.05182 7.61468 6.95912 7.70738C6.86642 7.80018 6.74102 7.85268 6.60992 7.85388C6.47882 7.85498 6.35252 7.80458 6.25822 7.71348L3.61171 5.06702L0.965207 7.71348C0.870907 7.80458 0.744606 7.85498 0.613506 7.85388C0.482406 7.85268 0.357007 7.80018 0.264297 7.70738C0.171597 7.61468 0.119017 7.48928 0.117877 7.35818C0.116737 7.22708 0.167126 7.10078 0.258206 7.00648L2.90471 4.36002L0.258206 1.71352C0.164476 1.61976 0.111816 1.4926 0.111816 1.36002C0.111816 1.22744 0.164476 1.10028 0.258206 1.00652Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-4 overflow-y-auto">
+                    <img src="./assets/images/successful_submit.svg" class="w-11/12 max-w-[18rem] mx-auto mb-5" alt="">
+                    <p class="mt-1 text-center text-gray-600 text-2xl">Contract</p>
+                    <p class="text-center text-gray-700 font-bold text-4xl mb-4">Submitted Successfully</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     <div id="sidebar-mobile"
         class="hs-overlay hs-overlay-open:translate-x-0 hidden -translate-x-full fixed top-0 left-0 transition-all duration-300 transform h-full max-w-xs w-full w-full z-[60] bg-white border-r hidden overflow-y-auto"
         tabindex="-1">
@@ -936,54 +1113,18 @@
         </div>
     </div>
     <script src="./assets/js/preline.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.21/interact.min.js"
-        integrity="sha512-F7QNEs612rFCwcEBGMDT7d9Hdf3gjoiK80DSbX8L2V+FBUQv3mWWzyt8ZWSdyRT8BKQWoYNA3zV8e9SkVEcdnA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
     <script>
         function toggleSidebarSize() {
             document.querySelector(".sidebar").classList.toggle("shrinked");
         }
 
-        interact('.resizable-panel')
-            .resizable({
-                // resize from all edges and corners
-                edges: { left: false, right: false, bottom: false, top: true },
-
-                listeners: {
-                    move(event) {
-                        var target = event.target
-                        var x = (parseFloat(target.getAttribute('data-x')) || 0)
-                        var y = (parseFloat(target.getAttribute('data-y')) || 0)
-
-                        // update the element's style
-                        target.style.width = event.rect.width + 'px'
-                        target.style.height = event.rect.height + 'px'
-
-                        // translate when resizing from top or left edges
-                        // x += event.deltaRect.left
-                        // y += event.deltaRect.top
-
-                        // target.style.transform = 'translate(' + x + 'px,' + y + 'px)'
-
-                        // target.setAttribute('data-x', x)
-                        // target.setAttribute('data-y', y)
-                        // target.textContent = Math.round(event.rect.width) + '\u00D7' + Math.round(event.rect.height)
-                    }
-                },
-                modifiers: [
-                    // keep the edges inside the parent
-                    interact.modifiers.restrictEdges({
-                        outer: 'parent'
-                    }),
-
-                    // minimum size
-                    interact.modifiers.restrictSize({
-                        min: { width: 100, height: 50 }
-                    })
-                ],
-
-                inertia: true
-            })
+        const multiSelect = new SlimSelect({
+            select: "#user-list",
+            settings: {
+                closeOnSelect: true,
+            }
+        })
     </script>
 </body>
 

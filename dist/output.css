@@ -1039,6 +1039,10 @@ select {
   right: 0.5rem;
 }
 
+.start-0 {
+  inset-inline-start: 0px;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -1089,6 +1093,10 @@ select {
 
 .col-span-1 {
   grid-column: span 1 / span 1;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
 }
 
 .float-right {
@@ -1474,6 +1482,10 @@ select {
   height: 1.5rem;
 }
 
+.h-7 {
+  height: 1.75rem;
+}
+
 .h-72 {
   height: 18rem;
 }
@@ -1576,6 +1588,10 @@ select {
 
 .w-64 {
   width: 16rem;
+}
+
+.w-7 {
+  width: 1.75rem;
 }
 
 .w-72 {
@@ -2383,6 +2399,12 @@ select {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .space-y-reverse > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 1;
 }
@@ -2732,11 +2754,6 @@ select {
   border-top-right-radius: 0.25rem;
 }
 
-.rounded-t-md {
-  border-top-left-radius: 0.375rem;
-  border-top-right-radius: 0.375rem;
-}
-
 .rounded-t-xl {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
@@ -2999,6 +3016,11 @@ select {
 .bg-gray-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
+.bg-gray-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
 .bg-gray-700 {
@@ -3626,6 +3648,11 @@ select {
 .text-emerald-600 {
   --tw-text-opacity: 1;
   color: rgb(5 150 105 / var(--tw-text-opacity));
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .text-gray-400 {
@@ -4835,6 +4862,46 @@ input.is-invalid:focus {
   .open-mobile-sidebar {
     display: inline-flex;
   }
+
+  .resizable-panel {
+    margin-left: 0 !important;
+  }
+}
+
+.checklist-wrapper input[type="checkbox"]{
+  display: none;
+}
+
+.checklist-wrapper.edit-mode input[type="checkbox"]{
+  display: block;
+}
+
+.checklist-wrapper .additional-information {
+  display: none;
+}
+
+.checklist-wrapper.edit-mode .additional-information {
+  display: block;
+}
+
+.checklist-wrapper .assign-btn,
+.checklist-wrapper .reject-btn {
+  display: block;
+}
+
+.checklist-wrapper .submit-reject-btn,
+.checklist-wrapper .cancel-reject-btn {
+  display: none;
+}
+
+.checklist-wrapper.edit-mode .assign-btn,
+.checklist-wrapper.edit-mode .reject-btn {
+  display: none;
+}
+
+.checklist-wrapper.edit-mode .submit-reject-btn,
+.checklist-wrapper.edit-mode .cancel-reject-btn {
+  display: block;
 }
 
 .dh-checklist-fill textarea {
@@ -4948,6 +5015,26 @@ input.is-invalid:focus {
 .note-toolbar,
 .note-statusbar {
   background-color: #fff !important;
+}
+
+.resizable-panel {
+  margin-left: 13rem;
+}
+
+@media (min-width: 1280px) {
+  .resizable-panel {
+    margin-left: 16.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .resizable-panel {
+    margin-left: 17rem;
+  }
+}
+
+.resizable-panel {
+  width: 100%;
 }
 
 @media (min-width: 640px) {
@@ -5481,6 +5568,11 @@ input.is-invalid:focus {
   display: none;
 }
 
+.hs-accordion.active.hs-accordion-active\:border-gray-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+
 .hs-accordion.active.hs-accordion-active\:text-blue-600 {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
@@ -5499,6 +5591,11 @@ input.is-invalid:focus {
   display: none;
 }
 
+.hs-accordion.active > .hs-accordion-toggle .hs-accordion-active\:border-gray-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+
 .hs-accordion.active > .hs-accordion-toggle .hs-accordion-active\:text-blue-600 {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
@@ -5515,6 +5612,11 @@ input.is-invalid:focus {
 
 .hs-accordion.active > .hs-accordion-toggle.hs-accordion-active\:hidden {
   display: none;
+}
+
+.hs-accordion.active > .hs-accordion-toggle.hs-accordion-active\:border-gray-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
 
 .hs-accordion.active > .hs-accordion-toggle.hs-accordion-active\:text-blue-600 {
