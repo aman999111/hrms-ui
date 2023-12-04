@@ -188,6 +188,28 @@ body {
     @apply text-slate-500 bg-slate-200;
 }
 
+.status-toggle.deployed {
+    @apply text-emerald-500 bg-emerald-100;
+    
+    svg {
+        @apply text-emerald-500;
+    }
+}
+.status-toggle.overrun {
+    @apply text-blue-500 bg-blue-100;
+
+    svg {
+        @apply text-blue-500;
+    }
+}
+.status-toggle.onbench {
+    @apply text-red-500 bg-red-100;
+
+    svg {
+        @apply text-red-500;
+    }
+}
+
 
 /* @media screen and (max-width: 1280px) {
     .main {
@@ -473,4 +495,11 @@ input.is-invalid {
 .resizable-panel {
     @apply ml-[13rem] xl:ml-[16.5rem] 2xl:ml-[17rem];
     width: 100%;
+}
+
+.filter-dropdown:has(input:checked) .hs-dropdown-toggle {
+    @apply bg-black;
+}
+.filter-dropdown:has(input:checked) .hs-dropdown-toggle svg {
+    @apply text-white;
 }

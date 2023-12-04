@@ -190,16 +190,24 @@
             <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C]">Add Employee</h2>
             <p>Please Fill The  Required Details To Add Employee</p>
         </div>
-        <p class="mb-3 font-bold text-[#4B4E5C]">Employee Type</p>
+        <!-- <p class="mb-3 font-bold text-[#4B4E5C]">Employee Type</p> -->
         <form action="">
             <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-4">
                 <div>
                     <label class="mb-1 text-sm" for="">Employee Type</label>
-                    <input type="text" class="k-input w-full">
+                    <input type="text" class="k-input w-full disabled:opacity-70 disabled:cursor-not-allowed" disabled value="Vendor">
                 </div>
                 <div>
-                    <label class="mb-1 text-sm" for="">Vendor Name</label>
-                    <input type="text" class="k-input w-full">
+                    <div class="mb-1 flex items-center justify-between">
+                        <label class="text-sm" for="">Vendor Name</label>
+                        <a href="./add-vendor.html" class="text-sm text-emerald-400 flex items-center gap-1">
+                            <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4c4.411 0 8 3.589 8 8s-3.589 8-8 8s-8-3.589-8-8s3.589-8 8-8m0-2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2zm5 9h-4V7h-2v4H7v2h4v4h2v-4h4v-2z"/></svg>
+                            Add New
+                        </a>
+                    </div>
+                    <select class="k-input w-full" name="" id="">
+                        <option value="">Select Vendor</option>
+                    </select>
                 </div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-4">
@@ -217,7 +225,7 @@
                 </div>
                 <div>
                     <label class="mb-1 text-sm" for="">Date Of Joining</label>
-                    <input type="text" class="k-input w-full">
+                    <input type="date" class="k-input w-full">
                 </div>
                 <div>
                     <label class="mb-1 text-sm" for="">Contact No.</label>
@@ -229,7 +237,9 @@
                 </div>
                 <div>
                     <label class="mb-1 text-sm" for="">Location</label>
-                    <input type="text" class="k-input w-full">
+                    <select class="k-input w-full" name="" id="">
+                        <option value="">Select Location</option>
+                    </select>
                 </div>
                 <div>
                     <label class="mb-1 text-sm" for="">Tenure</label>
