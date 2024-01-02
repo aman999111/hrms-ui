@@ -205,15 +205,24 @@
                         <p class="font-bold text-xl">Narayan</p>
                     </div>
                 </div>
-                <div class="flex items-center gap-x-6 2xl:gap-x-8 gap-y-4 flex-wrap">
-                    <p class="whitespace-nowrap">Designation: <span class="font-bold">UX/UI Designer</span></p>
-                    <p class="whitespace-nowrap">TMC: <span class="font-bold">17465</span></p>
-                    <p class="whitespace-nowrap">Date of joining: <span class="font-bold">10/03/2022</span></p>
-                    <p class="whitespace-nowrap">Department: <span class="font-bold">TDE</span></p>
-                    <p class="whitespace-nowrap">Location: <span class="font-bold">Delhi</span></p>
-                    <p class="whitespace-nowrap">Reporting Manager: <span class="font-bold">Karan Malhotra</span></p>
+                <div>
+                    <div class="flex items-center gap-x-6 2xl:gap-x-8 gap-y-4 flex-wrap">
+                        <p class="whitespace-nowrap">Designation: <span class="font-bold">UX/UI Designer</span></p>
+                        <p class="whitespace-nowrap">TMC: <span class="font-bold">17465</span></p>
+                        <p class="whitespace-nowrap">Date of joining: <span class="font-bold">10/03/2022</span></p>
+                        <p class="whitespace-nowrap">Department: <span class="font-bold">TDE</span></p>
+                        <p class="whitespace-nowrap">Location: <span class="font-bold">Delhi</span></p>
+                        <p class="whitespace-nowrap">Reporting Manager: <span class="font-bold">Karan Malhotra</span></p>
+                    </div>
+                    <div class="mt-4">
+                        <div class="inline-flex bg-white rounded shadow py-3 px-6">
+                            <input type="checkbox" class="shrink-0 mt-0.5 border-gray-200 rounded text-emerald-600 focus:ring-emerald-500 disabled:opacity-50 disabled:pointer-events-none" id="resigned-flag">
+                            <label for="resigned-flag" class="text-sm text-gray-500 ms-3">Resigned</label>
+                          </div>
+                    </div>
                 </div>
             </div>
+            
             <h2 class="font-extrabold text-xl text-[#4B4E5C]">Assigned Roles</h2>
             <div class="roles-wrapper flex items-center gap-2 flex-wrap mt-2">
                 <span class="px-4 py-2 text-xs bg-white rounded-full border">Admin</span>
@@ -262,184 +271,203 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-4">
-                <div class="flex">
-                    <input type="checkbox" class="shrink-0 mt-0.5 border-gray-200 rounded text-emerald-600 focus:ring-emerald-500 disabled:opacity-50 disabled:pointer-events-none" id="resigned-flag">
-                    <label for="resigned-flag" class="text-sm text-gray-500 ms-3">Resigned</label>
-                  </div>
-            </div>
         </div>
 
-        <div class="mb-4 mt-4">
-            <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C]">Add Certification Details</h2>
-            <p>Please Fill in the required information below</p>
-        </div>
-        <div>
-                <form action="">
-                        <button type="submit"
-                                class="assign-btn py-2 px-5 inline-flex justify-center items-center gap-2 rounded-md border border-black bg-black text-white hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all text-sm sm:text-base">
-                                Add
-                            </button>
-                            <div class="flex flex-col sm:flex-row items-center gap-4 mb-2 mt-4">
-                                <div>
-                                    <label for="" class="mb-1">Certification Name</label>
-                                    <input type="text" class="k-input w-full">
-                                </div>
-                                <div>
-                                    <label for="" class="mb-1">Certification Duration</label>
-                                    <input type="text" class="k-input w-full">
-                                </div>
-                                <div class="flex-1" class="mb-1">
-                                    <label for="">Certification Description</label>
-                                    <input type="text" class="k-input w-full">
-                                </div>
+        <div class="mt-4">
+            <nav class="flex space-x-2" aria-label="Tabs" role="tablist">
+                <button type="button"
+                    class="hs-tab-active:bg-gray-800 hs-tab-active:text-white dark:hs-tab-active:bg-gray-700 dark:hs-tab-active:text-white py-2 px-5 inline-flex items-center gap-2 bg-transparent text-sm font-medium text-center text-gray-500 rounded-lg hover:text-emerald-400 dark:hover:text-gray-400 active"
+                    id="pills-on-gray-color-item-1" data-hs-tab="#pills-on-gray-color-1"
+                    aria-controls="pills-on-gray-color-1" role="tab">
+                    Skills
+                </button>
+                <button type="button"
+                    class="hs-tab-active:bg-gray-800 hs-tab-active:text-white dark:hs-tab-active:bg-gray-700 dark:hs-tab-active:text-white py-2 px-5 inline-flex items-center gap-2 bg-transparent text-sm font-medium text-center text-gray-500 rounded-lg hover:text-emerald-400 dark:hover:text-gray-400"
+                    id="pills-on-gray-color-item-2" data-hs-tab="#pills-on-gray-color-2"
+                    aria-controls="pills-on-gray-color-2" role="tab">
+                    Certifications
+                </button>
+            </nav>
+
+            <div class="mt-3">
+                <div id="pills-on-gray-color-1" role="tabpanel" aria-labelledby="pills-on-gray-color-item-1">
+                    <!-- <div class="mb-4 mt-4">
+                        <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C]">Skills</h2>
+                        <p>Add Or Update Skills</p>
+                    </div> -->
+                    <div class="flex flex-col sm:flex-row items-start gap-y-4 gap-x-8 mt-4">
+                        <div class="order-2 sm:order-1">
+                            <div class="flex items-center gap-2 mb-4 sm:mb-6">
+                                <h2 class="font-extrabold text-xl text-[#4B4E5C]">Primary Skills</h2>
+                                <button data-hs-overlay="#add-primary-skill-modal">
+                                    <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m16.475 5.408l2.117 2.117m-.756-3.982L12.109 9.27a2.118 2.118 0 0 0-.58 1.082L11 13l2.648-.53c.41-.082.786-.283 1.082-.579l5.727-5.727a1.853 1.853 0 1 0-2.621-2.621"/><path d="M19 15v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3"/></g></svg>
+                                </button>
                             </div>
                             <div>
+                                <p class="font-semibold mb-1">User Experience Design</p>
+                                <p class="mb-1">Exp: 2 years</p>
+                                <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
+                                    <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
+                                    5/5
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex-1 order-3 sm:order-2 ">
+                            <div class="flex items-center gap-2 mb-4 sm:mb-6">
+                                <h2 class="font-extrabold text-xl text-[#4B4E5C]">Secondary Skills</h2>
+                                <button data-hs-overlay="#add-skill-modal">
+                                    <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m16.475 5.408l2.117 2.117m-.756-3.982L12.109 9.27a2.118 2.118 0 0 0-.58 1.082L11 13l2.648-.53c.41-.082.786-.283 1.082-.579l5.727-5.727a1.853 1.853 0 1 0-2.621-2.621"/><path d="M19 15v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3"/></g></svg>
+                                </button>
+                            </div>
+                            <div class="secondary-skills-wrapper flex items-center gap-4 flex-wrap">
                                 <div>
-                                    <input type="file" name="" id="cert-attach" class="hidden">
-                                    <label for="cert-attach" class="text-blue-500 underline font-medium">Upload Certification</label>
+                                    <p class="font-semibold mb-1">User Experience Design</p>
+                                    <p class="mb-1">Exp: 2 years</p>
+                                    <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
+                                        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
+                                        5/5
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-1">User Experience Design</p>
+                                    <p class="mb-1">Exp: 2 years</p>
+                                    <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
+                                        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
+                                        5/5
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-1">User Experience Design</p>
+                                    <p class="mb-1">Exp: 2 years</p>
+                                    <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
+                                        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
+                                        5/5
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-1">User Experience Design</p>
+                                    <p class="mb-1">Exp: 2 years</p>
+                                    <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
+                                        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
+                                        5/5
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-1">User Experience Design</p>
+                                    <p class="mb-1">Exp: 2 years</p>
+                                    <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
+                                        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
+                                        5/5
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-1">User Experience Design</p>
+                                    <p class="mb-1">Exp: 2 years</p>
+                                    <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
+                                        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
+                                        5/5
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-1">User Experience Design</p>
+                                    <p class="mb-1">Exp: 2 years</p>
+                                    <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
+                                        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
+                                        5/5
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="font-semibold mb-1">User Experience Design</p>
+                                    <p class="mb-1">Exp: 2 years</p>
+                                    <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
+                                        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
+                                        5/5
+                                    </p>
                                 </div>
                             </div>
-                    </form>
-                    <div class="flex overflow-x-auto gap-3 mt-4">
-                        <div class="group bg-[#F9F9F9] border border-transparent rounded-md p-4 2xl:p-6 min-w-[20rem] w-80 hover:bg-white hover:border-emerald-200 hover:shadow-xl">
-                            <div class="border-b">
-                                <h2 class="font-bold text-[#4B4E5C]">Master Design System</h2>
-                                <p class="text-sm 2xl:text-base mb-3">Course Duration 2 Years</p>
-                            </div>
-
-                            <div class="mt-4">
-                                <h2 class="font-bold text-[#4B4E5C]">Description</h2>
-                                <p class="text-sm 2xl:text-base mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                    elit. Donec eu lorem mauris. Fusce non</p>
-                            </div>
-
-                            <button type="button"
-                                class="py-2 px-6 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-gray-500 text-white group-hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all text-sm">
-                                View
-                            </button>
                         </div>
-
-                        <div class="group bg-[#F9F9F9] border border-transparent rounded-md p-4 2xl:p-6 min-w-[20rem] w-80 hover:bg-white hover:border-emerald-200 hover:shadow-xl">
-                            <div class="border-b">
-                                <h2 class="font-bold text-[#4B4E5C]">Google UX Design</h2>
-                                <p class="text-sm 2xl:text-base mb-3">Course Duration 2 Years</p>
-                            </div>
-
-                            <div class="mt-4">
-                                <h2 class="font-bold text-[#4B4E5C]">Description</h2>
-                                <p class="text-sm 2xl:text-base mb-3 break-normal">Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing
-                                    elit. Donec eu lorem mauris. Fusce non</p>
-                            </div>
-
-                            <button type="button"
-                                class="py-2 px-6 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-gray-500 text-white group-hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all text-sm">
-                                View
-                            </button>
+                        <div class="flex items-center gap-4 order-1 sm:order-3 ">
+                            <p class="font-extrabold text-xl text-[#4B4E5C]">Rating</p>
+                            <select name="" id="" class="k-input min-w-[10rem]">
+                                <option value="">Self</option>
+                            </select>
                         </div>
                     </div>
-        </div>
-        <div class="mb-4 mt-4">
-            <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C]">Skills</h2>
-            <p>Add Or Update Skills</p>
-        </div>
-        <div class="flex flex-col sm:flex-row items-start gap-y-4 gap-x-8 mt-4">
-            <div class="order-2 sm:order-1">
-                <div class="flex items-center gap-2 mb-4 sm:mb-6">
-                    <h2 class="font-extrabold text-xl text-[#4B4E5C]">Primary Skills</h2>
-                    <button data-hs-overlay="#add-primary-skill-modal">
-                        <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m16.475 5.408l2.117 2.117m-.756-3.982L12.109 9.27a2.118 2.118 0 0 0-.58 1.082L11 13l2.648-.53c.41-.082.786-.283 1.082-.579l5.727-5.727a1.853 1.853 0 1 0-2.621-2.621"/><path d="M19 15v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3"/></g></svg>
-                    </button>
                 </div>
-                <div>
-                    <p class="font-semibold mb-1">User Experience Design</p>
-                    <p class="mb-1">Exp: 2 years</p>
-                    <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
-                        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
-                        5/5
-                    </p>
-                </div>
-            </div>
-            <div class="flex-1 order-3 sm:order-2 ">
-                <div class="flex items-center gap-2 mb-4 sm:mb-6">
-                    <h2 class="font-extrabold text-xl text-[#4B4E5C]">Secondary Skills</h2>
-                    <button data-hs-overlay="#add-skill-modal">
-                        <svg class="w-6 h-6 text-slate-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m16.475 5.408l2.117 2.117m-.756-3.982L12.109 9.27a2.118 2.118 0 0 0-.58 1.082L11 13l2.648-.53c.41-.082.786-.283 1.082-.579l5.727-5.727a1.853 1.853 0 1 0-2.621-2.621"/><path d="M19 15v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3"/></g></svg>
-                    </button>
-                </div>
-                <div class="secondary-skills-wrapper flex items-center gap-4 flex-wrap">
+
+                <div id="pills-on-gray-color-2" class="hidden" role="tabpanel"
+                    aria-labelledby="pills-on-gray-color-item-2">
+                    <!-- <div class="mb-4 mt-4">
+                        <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C]">Add Certification Details</h2>
+                        <p>Please Fill in the required information below</p>
+                    </div> -->
                     <div>
-                        <p class="font-semibold mb-1">User Experience Design</p>
-                        <p class="mb-1">Exp: 2 years</p>
-                        <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
-                            5/5
-                        </p>
-                    </div>
-                    <div>
-                        <p class="font-semibold mb-1">User Experience Design</p>
-                        <p class="mb-1">Exp: 2 years</p>
-                        <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
-                            5/5
-                        </p>
-                    </div>
-                    <div>
-                        <p class="font-semibold mb-1">User Experience Design</p>
-                        <p class="mb-1">Exp: 2 years</p>
-                        <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
-                            5/5
-                        </p>
-                    </div>
-                    <div>
-                        <p class="font-semibold mb-1">User Experience Design</p>
-                        <p class="mb-1">Exp: 2 years</p>
-                        <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
-                            5/5
-                        </p>
-                    </div>
-                    <div>
-                        <p class="font-semibold mb-1">User Experience Design</p>
-                        <p class="mb-1">Exp: 2 years</p>
-                        <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
-                            5/5
-                        </p>
-                    </div>
-                    <div>
-                        <p class="font-semibold mb-1">User Experience Design</p>
-                        <p class="mb-1">Exp: 2 years</p>
-                        <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
-                            5/5
-                        </p>
-                    </div>
-                    <div>
-                        <p class="font-semibold mb-1">User Experience Design</p>
-                        <p class="mb-1">Exp: 2 years</p>
-                        <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
-                            5/5
-                        </p>
-                    </div>
-                    <div>
-                        <p class="font-semibold mb-1">User Experience Design</p>
-                        <p class="mb-1">Exp: 2 years</p>
-                        <p class="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-slate-100 text-sm">
-                            <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"/></svg>
-                            5/5
-                        </p>
+                            <form action="">
+                                    <button type="submit"
+                                            class="assign-btn py-2 px-5 inline-flex justify-center items-center gap-2 rounded-md border border-black bg-black text-white hover:opacity-70 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-all text-sm sm:text-base">
+                                            Add
+                                        </button>
+                                        <div class="flex flex-col sm:flex-row items-center gap-4 mb-2 mt-4">
+                                            <div>
+                                                <label for="" class="mb-1">Certification Name</label>
+                                                <input type="text" class="k-input w-full">
+                                            </div>
+                                            <div>
+                                                <label for="" class="mb-1">Certification Duration</label>
+                                                <input type="text" class="k-input w-full">
+                                            </div>
+                                            <div class="flex-1" class="mb-1">
+                                                <label for="">Certification Description</label>
+                                                <input type="text" class="k-input w-full">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <input type="file" name="" id="cert-attach" class="hidden">
+                                                <label for="cert-attach" class="text-blue-500 underline font-medium">Upload Certification</label>
+                                            </div>
+                                        </div>
+                                </form>
+                                <div class="flex overflow-x-auto gap-3 mt-4">
+                                    <div class="group bg-[#F9F9F9] border border-transparent rounded-md p-4 2xl:p-6 min-w-[20rem] w-80 hover:bg-white hover:border-emerald-200 hover:shadow-xl">
+                                        <div class="border-b">
+                                            <h2 class="font-bold text-[#4B4E5C]">Master Design System</h2>
+                                            <p class="text-sm 2xl:text-base mb-3">Course Duration 2 Years</p>
+                                        </div>
+            
+                                        <div class="mt-4">
+                                            <h2 class="font-bold text-[#4B4E5C]">Description</h2>
+                                            <p class="text-sm 2xl:text-base mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit. Donec eu lorem mauris. Fusce non</p>
+                                        </div>
+            
+                                        <button type="button"
+                                            class="py-2 px-6 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-gray-500 text-white group-hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all text-sm">
+                                            View
+                                        </button>
+                                    </div>
+            
+                                    <div class="group bg-[#F9F9F9] border border-transparent rounded-md p-4 2xl:p-6 min-w-[20rem] w-80 hover:bg-white hover:border-emerald-200 hover:shadow-xl">
+                                        <div class="border-b">
+                                            <h2 class="font-bold text-[#4B4E5C]">Google UX Design</h2>
+                                            <p class="text-sm 2xl:text-base mb-3">Course Duration 2 Years</p>
+                                        </div>
+            
+                                        <div class="mt-4">
+                                            <h2 class="font-bold text-[#4B4E5C]">Description</h2>
+                                            <p class="text-sm 2xl:text-base mb-3 break-normal">Lorem ipsum dolor sit amet,
+                                                consectetur adipiscing
+                                                elit. Donec eu lorem mauris. Fusce non</p>
+                                        </div>
+            
+                                        <button type="button"
+                                            class="py-2 px-6 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-gray-500 text-white group-hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all text-sm">
+                                            View
+                                        </button>
+                                    </div>
+                                </div>
                     </div>
                 </div>
-            </div>
-            <div class="flex items-center gap-4 order-1 sm:order-3 ">
-                <p class="font-extrabold text-xl text-[#4B4E5C]">Rating</p>
-                <select name="" id="" class="k-input min-w-[10rem]">
-                    <option value="">Self</option>
-                </select>
             </div>
         </div>
     </div>

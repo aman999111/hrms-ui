@@ -251,6 +251,9 @@
                                             </button>
                                          
                                             <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden mt-2 bg-white shadow-md rounded-lg p-2 mt-2" aria-labelledby="hs-dropdown-auto-close-inside">
+                                                <div>
+                                                    <input type="search" placeholder="Search" class="">
+                                                </div>
                                                 <div class="filter-item-list"></div>
                                                 <!-- <div class="flex gap-2">
                                                     <button onclick="clearFilter(this);" class="flex mt-2 w-full items-center justify-center gap-x-3.5 py-2 px-3 rounded-lg text-xs text-gray-800 bg-gray-100 hover:bg-gray-50 focus:outline-none focus:bg-gray-100" href="#">Clear</button>
@@ -328,10 +331,958 @@
                                         Detailed View</th>
                                     <th scope="col"
                                         class="px-6 py-3 whitespace-nowrap text-left text-xs 2xl:text-sm font-medium text-black uppercase">
-                                        Edit</th>
+                                        Edit
+                                        <div class="mt-1 mx-1 sm:mt-1 hs-dropdown relative sm:inline-flex z-20 [--auto-close:inside]">
+                                            <button id="hs-dropdown-auto-close-inside" type="button" class="hs-dropdown-toggle p-1 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-gray-100 text-gray-800 shadow-sm disabled:opacity-50 disabled:pointer-events-none">
+                                                <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg"
+                                                width="512" height="512" viewBox="0 0 512 512">
+                                                <path fill="currentColor"
+                                                    d="M472 168H40a24 24 0 0 1 0-48h432a24 24 0 0 1 0 48m-80 112H120a24 24 0 0 1 0-48h272a24 24 0 0 1 0 48m-96 112h-80a24 24 0 0 1 0-48h80a24 24 0 0 1 0 48" />
+                                                </svg>
+                                            </button>
+                                         
+                                            <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden mt-2 bg-white shadow-md rounded-lg p-2 mt-2" aria-labelledby="hs-dropdown-auto-close-inside">
+                                                <div class="filter-item-list"></div>
+                                                <!-- <div class="flex gap-2">
+                                                    <button onclick="clearFilter(this);" class="flex mt-2 w-full items-center justify-center gap-x-3.5 py-2 px-3 rounded-lg text-xs text-gray-800 bg-gray-100 hover:bg-gray-50 focus:outline-none focus:bg-gray-100" href="#">Clear</button>
+                                                    <button onclick="filterTable(this);" class="flex mt-2 w-full items-center justify-center gap-x-3.5 py-2 px-3 rounded-lg text-xs text-gray-800 bg-gray-100 hover:bg-gray-50 focus:outline-none focus:bg-gray-100" href="#">Apply</button>
+                                                </div> -->
+                                            </div>
+                                          </div>
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 1
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status completed">Completed</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button id="hs-dropdown-default" type="button"
+                                                class="hs-dropdown-toggle py-1 px-2 inline-flex justify-center items-center gap-2 border border-transparent rounded-md font-medium text-gray-700 shadow-sm align-middle hover:bg-gray-50 hover:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-emerald-600 transition-all text-sm">
+                                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="20"
+                                                    height="20" viewBox="0 0 20 20">
+                                                    <g fill="currentColor">
+                                                        <circle cx="10" cy="15" r="2" />
+                                                        <circle cx="10" cy="10" r="2" />
+                                                        <circle cx="10" cy="5" r="2" />
+                                                    </g>
+                                                </svg>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-72 hidden z-30 mt-2 min-w-[10rem] bg-white shadow-md rounded-lg"
+                                                aria-labelledby="hs-dropdown-default">
+                                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                                                    href="#">
+                                                    Edit
+                                                </a>
+                                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                                                    href="#">
+                                                    Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 2
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status pending">Pending</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 3
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status hold">On Hold</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 4
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status progress">Progress</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 1
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status completed">Completed</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button id="hs-dropdown-default" type="button"
+                                                class="hs-dropdown-toggle py-1 px-2 inline-flex justify-center items-center gap-2 border border-transparent rounded-md font-medium text-gray-700 shadow-sm align-middle hover:bg-gray-50 hover:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-emerald-600 transition-all text-sm">
+                                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="20"
+                                                    height="20" viewBox="0 0 20 20">
+                                                    <g fill="currentColor">
+                                                        <circle cx="10" cy="15" r="2" />
+                                                        <circle cx="10" cy="10" r="2" />
+                                                        <circle cx="10" cy="5" r="2" />
+                                                    </g>
+                                                </svg>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-72 hidden z-30 mt-2 min-w-[10rem] bg-white shadow-md rounded-lg"
+                                                aria-labelledby="hs-dropdown-default">
+                                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                                                    href="#">
+                                                    Edit
+                                                </a>
+                                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                                                    href="#">
+                                                    Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 2
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status pending">Pending</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 3
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status hold">On Hold</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 4
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status progress">Progress</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 1
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status completed">Completed</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button id="hs-dropdown-default" type="button"
+                                                class="hs-dropdown-toggle py-1 px-2 inline-flex justify-center items-center gap-2 border border-transparent rounded-md font-medium text-gray-700 shadow-sm align-middle hover:bg-gray-50 hover:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-emerald-600 transition-all text-sm">
+                                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="20"
+                                                    height="20" viewBox="0 0 20 20">
+                                                    <g fill="currentColor">
+                                                        <circle cx="10" cy="15" r="2" />
+                                                        <circle cx="10" cy="10" r="2" />
+                                                        <circle cx="10" cy="5" r="2" />
+                                                    </g>
+                                                </svg>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-72 hidden z-30 mt-2 min-w-[10rem] bg-white shadow-md rounded-lg"
+                                                aria-labelledby="hs-dropdown-default">
+                                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                                                    href="#">
+                                                    Edit
+                                                </a>
+                                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                                                    href="#">
+                                                    Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 2
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status pending">Pending</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 3
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status hold">On Hold</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 4
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status progress">Progress</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 1
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status completed">Completed</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button id="hs-dropdown-default" type="button"
+                                                class="hs-dropdown-toggle py-1 px-2 inline-flex justify-center items-center gap-2 border border-transparent rounded-md font-medium text-gray-700 shadow-sm align-middle hover:bg-gray-50 hover:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-emerald-600 transition-all text-sm">
+                                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="20"
+                                                    height="20" viewBox="0 0 20 20">
+                                                    <g fill="currentColor">
+                                                        <circle cx="10" cy="15" r="2" />
+                                                        <circle cx="10" cy="10" r="2" />
+                                                        <circle cx="10" cy="5" r="2" />
+                                                    </g>
+                                                </svg>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-72 hidden z-30 mt-2 min-w-[10rem] bg-white shadow-md rounded-lg"
+                                                aria-labelledby="hs-dropdown-default">
+                                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                                                    href="#">
+                                                    Edit
+                                                </a>
+                                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                                                    href="#">
+                                                    Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 2
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status pending">Pending</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 3
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status hold">On Hold</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 4
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status progress">Progress</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 1
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status completed">Completed</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button id="hs-dropdown-default" type="button"
+                                                class="hs-dropdown-toggle py-1 px-2 inline-flex justify-center items-center gap-2 border border-transparent rounded-md font-medium text-gray-700 shadow-sm align-middle hover:bg-gray-50 hover:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-emerald-600 transition-all text-sm">
+                                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="20"
+                                                    height="20" viewBox="0 0 20 20">
+                                                    <g fill="currentColor">
+                                                        <circle cx="10" cy="15" r="2" />
+                                                        <circle cx="10" cy="10" r="2" />
+                                                        <circle cx="10" cy="5" r="2" />
+                                                    </g>
+                                                </svg>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-72 hidden z-30 mt-2 min-w-[10rem] bg-white shadow-md rounded-lg"
+                                                aria-labelledby="hs-dropdown-default">
+                                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                                                    href="#">
+                                                    Edit
+                                                </a>
+                                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                                                    href="#">
+                                                    Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 2
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status pending">Pending</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 3
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status hold">On Hold</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 4
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status progress">Progress</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 1
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status completed">Completed</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <div class="hs-dropdown relative inline-flex">
+                                            <button id="hs-dropdown-default" type="button"
+                                                class="hs-dropdown-toggle py-1 px-2 inline-flex justify-center items-center gap-2 border border-transparent rounded-md font-medium text-gray-700 shadow-sm align-middle hover:bg-gray-50 hover:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-emerald-600 transition-all text-sm">
+                                                <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="20"
+                                                    height="20" viewBox="0 0 20 20">
+                                                    <g fill="currentColor">
+                                                        <circle cx="10" cy="15" r="2" />
+                                                        <circle cx="10" cy="10" r="2" />
+                                                        <circle cx="10" cy="5" r="2" />
+                                                    </g>
+                                                </svg>
+                                            </button>
+
+                                            <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-72 hidden z-30 mt-2 min-w-[10rem] bg-white shadow-md rounded-lg"
+                                                aria-labelledby="hs-dropdown-default">
+                                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                                                    href="#">
+                                                    Edit
+                                                </a>
+                                                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500"
+                                                    href="#">
+                                                    Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 2
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status pending">Pending</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 3
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status hold">On Hold</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 4
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">10/01/1997
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">GSK</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">1.1Cr</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Application
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">Qlik Sense
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">T&M</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <span class="status progress">Progress</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 ">
+                                        <a class="text-gray-800 hover:text-blue-700 underline" href="#">View All
+                                            Details</a>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                        <button type="button"
+                                            class="inline-flex flex-shrink-0 justify-center items-center gap-2 h-6 w-6 rounded-md border border-transparent font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-white transition-all text-xs"
+                                            href="#">
+                                            <svg class="w-5 h-5 text-gray-800 hover:text-emerald-500"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g fill="none">
+                                                    <path
+                                                        d="M24 0v24H0V0h24ZM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018Zm.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022Zm-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01l-.184-.092Z" />
+                                                    <path fill="currentColor"
+                                                        d="M13 3a1 1 0 0 1 .117 1.993L13 5H5v14h14v-8a1 1 0 0 1 1.993-.117L21 11v8a2 2 0 0 1-1.85 1.995L19 21H5a2 2 0 0 1-1.995-1.85L3 19V5a2 2 0 0 1 1.85-1.995L5 3h8Zm6.243.343a1 1 0 0 1 1.497 1.32l-.083.095l-9.9 9.899a1 1 0 0 1-1.497-1.32l.083-.094l9.9-9.9Z" />
+                                                </g>
+                                            </svg>
+                                        </button>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 ">Project 1
                                     </td>
@@ -836,6 +1787,7 @@
 
         let datatable = new DataTable("#datatable", {
             scrollX: true,
+            scrollY: "60vh",
             ordering: false,
             initComplete: function () {
                 const currentDt = this;

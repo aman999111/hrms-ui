@@ -155,7 +155,7 @@ body {
 }
 
 .status {
-    @apply px-5 py-2 rounded-full inline-block text-xs font-semibold;
+    @apply px-5 py-2 rounded-full inline-block text-xs font-semibold whitespace-nowrap;
 }
 .status.completed {
     @apply text-emerald-500 bg-emerald-100;
@@ -182,10 +182,44 @@ body {
     @apply text-orange-500 bg-orange-100;
 }
 .status.deployed {
-    @apply text-amber-500 bg-amber-100;
+    @apply text-emerald-500 bg-emerald-100;
 }
 .status.draft {
     @apply text-slate-500 bg-slate-200;
+}
+.status.lwp {
+    @apply text-slate-500 bg-slate-200;
+}
+.status.ml {
+    @apply text-pink-500 bg-pink-100;
+}
+.status.others {
+    @apply text-gray-500 bg-gray-100;
+}
+.status.over {
+    @apply text-rose-500 bg-rose-100;
+}
+
+.status-toggle.lwp {
+    @apply text-slate-500 bg-slate-100;
+    
+    svg {
+        @apply text-slate-500;
+    }
+}
+.status-toggle.ml {
+    @apply text-pink-500 bg-pink-100;
+
+    svg {
+        @apply text-pink-500;
+    }
+}
+.status-toggle.onbench {
+    @apply text-red-500 bg-red-100;
+
+    svg {
+        @apply text-red-500;
+    }
 }
 
 .status-toggle.deployed {
@@ -200,13 +234,6 @@ body {
 
     svg {
         @apply text-blue-500;
-    }
-}
-.status-toggle.onbench {
-    @apply text-red-500 bg-red-100;
-
-    svg {
-        @apply text-red-500;
     }
 }
 
@@ -286,7 +313,7 @@ input.is-invalid {
     @apply flex gap-2 items-center text-black text-sm;
 }
 .paginate_button {
-    @apply text-black ;
+    @apply text-black cursor-pointer;
 }
 .paginate_button.current {
     @apply bg-[#00CC83] text-white rounded px-2 py-1;
@@ -353,12 +380,22 @@ input.is-invalid {
     justify-content: center;
 }
 
-.sidebar.shrinked + .header {
+body:has(.sidebar.shrinked) .header {
     width: calc(100vw - 5rem);
 }
+/* .sidebar.shrinked + .header {
+} */
 
 :has(.sidebar.shrinked) .main {
     @apply pl-[6rem] xl:pl-[6.5rem] 2xl:pl-[7rem];
+}
+
+.header {
+    transition: width .25s linear;
+}
+
+.main {
+    transition: padding-left .25s linear;
 }
 
 .open-mobile-sidebar {
