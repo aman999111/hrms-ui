@@ -540,3 +540,11 @@ body:has(.sidebar.shrinked) .header {
 .filter-dropdown:has(input:checked) .hs-dropdown-toggle svg {
     @apply text-white;
 }
+
+.hidden-row {
+    display: none;
+}
+
+.hidden-row.show {
+    display: table-row;
+}
