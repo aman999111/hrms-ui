@@ -548,3 +548,23 @@ body:has(.sidebar.shrinked) .header {
 .hidden-row.show {
     display: table-row;
 }
+
+.approve-all-btn {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+}
+
+.approve-btn {
+    transition: opacity .25s ease;
+}
+
+:has(#select-all:checked) .approve-all-btn {
+    opacity: 1;
+    pointer-events: all;
+}
+
+:has(#select-all:checked) .approve-btn {
+    opacity: 0;
+    pointer-events: none;
+}
