@@ -774,6 +774,28 @@
             document.querySelector(".sidebar").classList.toggle("shrinked");
         }
     </script>
+    <script>
+        (async () => {
+            let headersList = {
+                "Accept": "*/*",
+                "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+                
+            }
+    
+            let bodyContent = JSON.stringify({
+                "articleId": 201
+            });
+    
+            let response = await fetch("https://kockpit.in/blogs-community/comments.php", { 
+                method: "POST",
+                body: bodyContent,
+                headers: {"Content-Type": "application/json"}
+            });
+    
+            let data = await response.json();
+            console.log(data);
+        })();
+    </script>
 </body>
 
 </html>
