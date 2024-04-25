@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre Sales Checklist Questions</title>
     <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
 
 <body>
@@ -196,7 +197,7 @@
             </div>
         </div>
     </div>
-    <div class="main overflow-y-auto">
+    <div class="main overflow-y-auto relative">
         <div class="flex items-center justify-between mb-6">
             <div>
                 <h2 class="font-extrabold text-xl 2xl:text-2xl text-[#4B4E5C]">Contract Info:</h2>
@@ -357,8 +358,8 @@
         </div>
 
         
-        <div class="mt-4">
-            <nav class="flex space-x-2" aria-label="Tabs" role="tablist">
+        <div class="mt-4 divToExpand">
+            <nav class="flex space-x-2 items-center" aria-label="Tabs" role="tablist">
                 <button type="button"
                     class="hs-tab-active:bg-gray-800 hs-tab-active:text-white dark:hs-tab-active:bg-gray-700 dark:hs-tab-active:text-white py-2 px-5 inline-flex items-center gap-2 bg-transparent text-sm font-medium text-center text-gray-500 rounded-lg hover:text-emerald-400 dark:hover:text-gray-400 active"
                     id="pills-on-gray-color-item-1" data-hs-tab="#pills-on-gray-color-1"
@@ -376,6 +377,10 @@
                     id="pills-on-gray-color-item-3" data-hs-tab="#pills-on-gray-color-3"
                     aria-controls="pills-on-gray-color-3" role="tab">
                     Billing
+                </button>
+
+                <button style="margin-left: auto;" onclick="handleDivExpand(this);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19H5v-5m9-9h5v5"/></svg>
                 </button>
             </nav>
 
@@ -902,6 +907,12 @@
     <script>
         function openModal() {
             HSOverlay.open(document.querySelector("#hs-medium-modal"))
+        }
+
+        function handleDivExpand(btn) {
+            const divToExpand = btn.closest(".divToExpand");
+
+            divToExpand.classList.toggle("expanded");
         }
     </script>
 </body>

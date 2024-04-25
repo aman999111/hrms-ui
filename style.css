@@ -40,8 +40,6 @@
 
 body {
     font-family: "Gilroy", sans-serif;
-    /* background-image: url('../assets/images/testing.png'); */
-    /* background-size: 100% auto; */
 }
 
 .form-wrapper {
@@ -147,7 +145,6 @@ body {
 .menu-item:hover img {
     filter: brightness(0) invert(1);
 }
-
 .main {
     @apply pl-[14rem] xl:pl-[17.5rem] 2xl:pl-[18rem] h-[calc(100vh-3.5rem)] xl:h-[calc(100vh-4rem)] 2xl:h-[calc(100vh-5rem)] mt-14 xl:mt-16 2xl:mt-20 pr-4 xl:pr-6 2xl:pr-8;
     padding-top: 1rem;
@@ -366,6 +363,9 @@ input.is-invalid {
 .sidebar.shrinked .menu-item-text {
     display: none;
 }
+.sidebar.shrinked .sidebar-dropdown-icon {
+    display: none;
+}
 
 .sidebar.shrinked {
     width: 5rem;
@@ -567,4 +567,14 @@ body:has(.sidebar.shrinked) .header {
 :has(#select-all:checked) .approve-btn {
     opacity: 0;
     pointer-events: none;
+}
+
+.edit-mode-content {
+    display: none !important;
+}
+tr.edit-mode .normal-mode-content {
+    display: none !important;
+}
+tr.edit-mode .edit-mode-content {
+    display: block !important;
 }

@@ -1,0 +1,68 @@
+.sidebar .sidebar-dropdown-menu {
+    padding-left: 1.5rem;
+}
+
+.sidebar.shrinked .sidebar-dropdown-menu {
+    padding-left: 0;
+}
+
+.menu-item-inner {
+    position: relative;
+}
+.menu-item-inner:hover {
+    color: #00cc83;
+}
+.menu-item-inner::before, .menu-item-inner::after {
+    position: absolute;
+    content: "";
+}
+.menu-item-inner::before {
+    top: 0;
+    left: -.5rem;
+    width: 2px;
+    background-color: #DEE8EF;
+}
+.sidebar-dropdown-menu li:not(:last-child) .menu-item-inner::before {
+    height: calc(100% + .5rem);
+}
+.sidebar-dropdown-menu li:last-child .menu-item-inner::before {
+    height: calc(50% - .5rem);
+}
+.menu-item-inner::after {
+    height: 50%;
+    top: 0;
+    width: 1rem;
+    left: -.5rem;
+    border-left: 2px solid #DEE8EF;
+    border-bottom: 2px solid #DEE8EF;
+    border-bottom-left-radius: .5rem;
+}
+
+.sidebar.shrinked .menu-item-inner::after, 
+.sidebar.shrinked .menu-item-inner::before {
+    display: none;
+} 
+
+.sidebar.shrinked .menu-item-inner .menu-item-text {
+    display: none;
+}
+
+.sidebar.shrinked .menu-item-inner {
+    padding: 0;
+    justify-content: center;
+}
+
+.divToExpand {
+    transition: all .5s ease;
+}
+
+.divToExpand.expanded {
+    transition: all .5s ease;
+    position: absolute;
+    right: 1rem;
+    width: calc(100vw - 18rem);
+    top: 0;
+    height: calc(100vh - 7rem);
+    overflow-y: auto;
+    background-color: white;
+}
