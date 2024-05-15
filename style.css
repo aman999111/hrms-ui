@@ -578,3 +578,24 @@ tr.edit-mode .normal-mode-content {
 tr.edit-mode .edit-mode-content {
     display: block !important;
 }
+
+
+.project-switch {
+    z-index: 1;
+    transition: all 1s ease;
+}
+.project-switch::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: #222;
+    border-radius: 10rem;
+    z-index: -1;
+    left: 0;
+    transition: all .25s ease;
+}
+:has(#projects:checked) .project-switch::before {
+    left: 50%;
+    /* right: 0; */
+}
