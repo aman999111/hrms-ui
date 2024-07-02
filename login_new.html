@@ -9,6 +9,74 @@
         .login-btn {
             box-shadow: 0px 20px 33px 0px #00CC834A;
         }
+
+        @keyframes revealImg1 {
+            0% {
+                clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+            }
+            
+            100% {
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            }
+        }
+
+        @keyframes revealImg2 {
+            0% {
+                clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+            }
+            
+            100% {
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            }
+        }
+
+        @keyframes circleAnim {
+            0% {
+                transform: translate(-25%, -25%) scale(0);
+            }
+            100% {
+                transform: translate(-25%, -25%) scale(1);
+            }
+        }
+        @keyframes circleAnim2 {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes pillReveal {
+            0% {
+                clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+            }
+            
+            100% {
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            }
+        }
+
+        .decor_img_1 {
+            animation: revealImg1 1s cubic-bezier(0.85, 0, 0.15, 1) backwards;
+            animation-delay: .25s;
+        }
+        .decor_img_2 {
+            animation: revealImg2 1s cubic-bezier(0.85, 0, 0.15, 1) backwards;
+            animation-delay: .25s;
+        }
+        .decor_circle {
+            animation: circleAnim .5s cubic-bezier(0.85, 0, 0.15, 1) backwards;
+            animation-delay: .75s;
+            transform-origin: top left;
+        }
+        .decor_pill {
+            animation: pillReveal 1s ease backwards;
+            animation-delay: 1s;
+        }
+        .decor_circle2 {
+            animation: circleAnim2 .5s cubic-bezier(0.85, 0, 0.15, 1) backwards;
+            animation-delay: 1.5s;
+        }
     </style>
 </head>
 <body>
@@ -17,7 +85,7 @@
             <div class="login_form_wrapper w-full max-w-2xl flex flex-col items-center mx-auto px-4 my-auto">
                 <div class="logo flex items-center gap-2 mb-4">
                     <img src="./assets/images/prime_logo_icon.svg" class="h-16 w-auto" alt="">
-                    <img src="./assets/images/prime_logo_text.svg" class="h-8 w-auto dark:invert" alt="">
+                    <img src="./assets/images/prime_logo_text.svg" class="h-8 w-auto dark:brightness-0 dark:invert" alt="">
                 </div>
         
                 <h1 class="text-4xl font-extrabold text-center mb-2 text-gray-700 dark:text-white">Portal for Resource Integration Management <span class="font-normal text-emerald-400">and Efficiency</span></h1>
@@ -36,16 +104,16 @@
                 </div>
                 <button class="login-btn p-4 bg-emerald-400 rounded-lg text-white font-semibold w-full max-w-40">Login</button>
             </div>
-            <img class="absolute bottom-0 w-1/5" style="left: 1.5rem;" src="./assets/images/decor_img_1.png" alt="">
-            <img class="absolute top-0 w-1/5" style="right: 1.5rem;" src="./assets/images/decor_img_2.png" alt="">
-            <div class="absolute bottom-0 right-0">
-                <svg viewbox="0 0 50 50" style="width: 4rem;">
-                    <ellipse rx="20" ry="20" cx="25" cy="25" style="stroke: #00CC83; fill: none; stroke-width: 5px;"  />
-                </svg>
-                <!-- <img src="./assets/images/pill.svg" alt=""> -->
-                <svg version="1.1" viewBox="0 0 16 9" style="height: 4rem; width: 8rem;">
-                    <rect style="fill: #00cc83;" x="1" y="1" width="100%" height="100%" fill="silver" stroke="#00cc82" stroke-width="0.1" ry="1" rx="1"/>
-                  </svg>
+            <img class="decor_img_1 absolute bottom-0 w-1/5" style="left: 1.5rem;" src="./assets/images/decor_img_1.png" alt="">
+            <img class="decor_img_2 absolute top-0 w-1/5" style="right: 1.5rem;" src="./assets/images/decor_img_2.png" alt="">
+            <div class="absolute left-0 top-0 w-1/12 aspect-square overflow-hidden rounded-2xl">
+                <img src="./assets/images/decor_circle.svg" class="decor_circle w-full h-full" style="transform: translate(-25%, -25%);" alt="" srcset="">
+            </div>
+            <div class="absolute bottom-0 right-0 overflow-hidden flex items-end rounded-2xl" style="width: 25%; aspect-ratio: 1;">
+                <div class="flex items-center gap-4 flex-1" style="transform: translate(25%, -25%) rotate(45deg);">
+                    <div class="decor_circle2 rounded-full bg-transparent border-emerald-400" style="border-width: .5vw; width: 22%; aspect-ratio: 1;"></div>
+                    <img class="decor_pill" src="./assets/images/pill.svg" alt="" style="width: 78%; height: auto;">
+                </div>
             </div>
         </div>
     </div>
