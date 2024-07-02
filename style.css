@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --sidebar-width: 18rem;
+    --sidebar-width-shrinked: 7rem;
+}
+
 @font-face {
     font-family: "Gilroy";
     font-weight: 300;
@@ -115,40 +120,70 @@ body {
     background-size: contain;
     background-position: center;
 } */
+ 
 
 /* Sidebar Styles */
 .menu-item.active {
-    color: white;
+    position: relative;
+    color: #00cc83;
+    /* background-color: #00cc83; */
+}
+.menu-item.active::before {
+    content: "";
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    bottom: 0;
     background-color: #00cc83;
+    width: .5rem;
+    border-radius: 5rem;
+    margin-block: auto;
+    /* height: 2.5rem; */
 }
 .menu-item.active span {
     font-weight: 700;
 }
 .menu-item.active svg {
-    color: white;
+    color: black;
+    filter: invert(99%) sepia(78%) saturate(1575%) hue-rotate(76deg) brightness(89%) contrast(84%);
 }
 .menu-item svg {
     color: #8F90A6;
 }
 
 .menu-item:hover {
-    color: white;
-    background-color: #00cc83;
+    color: #00cc83;
+    /* background-color: #00cc83; */
 }
 .menu-item:hover svg {
-    color: white;
+    color: black;
+    filter: invert(99%) sepia(78%) saturate(1575%) hue-rotate(76deg) brightness(89%) contrast(84%);
+}
+
+.menu-item img {
+    filter: invert(58%) sepia(11%) saturate(476%) hue-rotate(199deg) brightness(98%) contrast(89%);
 }
 
 .menu-item.active img {
-    filter: brightness(0) invert(1);
+    filter: invert(99%) sepia(78%) saturate(1575%) hue-rotate(76deg) brightness(89%) contrast(84%);
 }
 .menu-item:hover img {
-    filter: brightness(0) invert(1);
+    filter: invert(99%) sepia(78%) saturate(1575%) hue-rotate(76deg) brightness(89%) contrast(84%);
 }
 .main {
-    @apply pl-[14rem] xl:pl-[17.5rem] 2xl:pl-[18rem] h-[calc(100vh-3.5rem)] xl:h-[calc(100vh-4rem)] 2xl:h-[calc(100vh-5rem)] mt-14 xl:mt-16 2xl:mt-20 pr-4 xl:pr-6 2xl:pr-8;
+    @apply h-[calc(100vh-5rem)] mt-20 pr-4 xl:pr-6 2xl:pr-8;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    padding-left: var(--sidebar-width);
+    transition: all 1s ease;
+}
+
+:has(.sidebar_new.shrinked) .main {
+    padding-left: var(--sidebar-width-shrinked);
+}
+
+.sidebar_new {
+    @apply h-[calc(100vh-5rem)];
 }
 
 .status {
@@ -403,7 +438,7 @@ body:has(.sidebar.shrinked) .header {
 }
 
 @media screen and (max-width: 1000px) {
-    .sidebar {
+    .sidebar, .sidebar_new {
         display: none;
     }
 
@@ -425,6 +460,10 @@ body:has(.sidebar.shrinked) .header {
 
     .resizable-panel {
         margin-left: 0 !important;
+    }
+
+    .logo_full_form {
+        display: none;
     }
 }
 
