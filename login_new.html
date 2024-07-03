@@ -185,9 +185,9 @@
                 <button
                     class="login-btn p-4 bg-emerald-400 rounded-lg text-white font-semibold w-full max-w-40">Login</button>
             </div>
-            <img class="decor_img_1 absolute bottom-0 w-1/5" style="left: 1.5rem;" src="./assets/images/decor_img_1.png"
+            <img class="decor_img_1 absolute bottom-0 w-1/5 hidden sm:block" style="left: 1.5rem;" src="./assets/images/decor_img_1.png"
                 alt="">
-            <img class="decor_img_2 absolute top-0 w-1/5" style="right: 1.5rem;" src="./assets/images/decor_img_2.png"
+            <img class="decor_img_2 absolute top-0 w-1/5 hidden sm:block" style="right: 1.5rem;" src="./assets/images/decor_img_2.png"
                 alt="">
             <div class="absolute left-0 top-0 w-1/12 aspect-square overflow-hidden rounded-2xl">
                 <img src="./assets/images/decor_circle.svg" class="decor_circle w-full h-full"
@@ -195,30 +195,14 @@
 
                     <div class="absolute w-max h-max" style="left: 25%; top: 25%;">
                         <button type="button"
-                            class="hs-dark-mode-active:hidden block hs-dark-mode group flex items-center text-gray-600 hover:text-blue-600 font-medium dark:text-neutral-400 dark:hover:text-neutral-500"
+                            class="hs-dark-mode-active:hidden block hs-dark-mode group flex items-center text-gray-600 hover:text-black"
                             data-hs-theme-click-value="dark">
-                            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
-                            </svg>
+                            <svg class="flex-shrink-0 size-8" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 26 26"><g fill="none"><defs><mask id="pepiconsPopMoonCircleFilled0"><path fill="#fff" d="M0 0h26v26H0z"/><path fill="#000" fill-rule="evenodd" d="M11.764 9.128a4.506 4.506 0 0 1 2.6-3.196c.93-.41.727-1.784-.281-1.908c-4.612-.566-8.921 2.498-9.895 7.078c-1.035 4.87 2.067 9.656 6.93 10.69c4.862 1.033 9.642-2.078 10.677-6.947a9.045 9.045 0 0 0 .195-2.166c-.032-1.019-1.388-1.343-1.877-.449a4.504 4.504 0 0 1-4.885 2.245a4.505 4.505 0 0 1-3.464-5.347m-.23 10.708c-3.782-.804-6.195-4.528-5.39-8.318a7.022 7.022 0 0 1 4.727-5.23a6.512 6.512 0 0 0-1.063 2.424c-.747 3.516 1.493 6.973 5.005 7.72a6.487 6.487 0 0 0 4.636-.751c-1.273 3.053-4.57 4.866-7.916 4.155" clip-rule="evenodd"/></mask></defs><circle cx="13" cy="13" r="13" fill="currentColor" mask="url(#pepiconsPopMoonCircleFilled0)"/></g></svg>
                         </button>
                         <button type="button"
-                            class="hs-dark-mode-active:block hidden hs-dark-mode group flex items-center text-gray-600 hover:text-blue-600 font-medium dark:text-neutral-400 dark:hover:text-neutral-500"
-                            data-hs-theme-click-value="light">
-                            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="4"></circle>
-                                <path d="M12 2v2"></path>
-                                <path d="M12 20v2"></path>
-                                <path d="m4.93 4.93 1.41 1.41"></path>
-                                <path d="m17.66 17.66 1.41 1.41"></path>
-                                <path d="M2 12h2"></path>
-                                <path d="M20 12h2"></path>
-                                <path d="m6.34 17.66-1.41 1.41"></path>
-                                <path d="m19.07 4.93-1.41 1.41"></path>
-                            </svg>
+                        class="hs-dark-mode-active:block hidden hs-dark-mode group flex items-center text-white hover:text-orange-200"
+                        data-hs-theme-click-value="light">
+                            <svg class="flex-shrink-0 size-8" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 26 26"><g fill="none"><defs><mask id="pepiconsPopSunCircleFilled0"><path fill="#fff" d="M0 0h26v26H0z"/><g fill="#000"><path fill-rule="evenodd" d="M13 17a4 4 0 1 0 0-8a4 4 0 0 0 0 8m0-6a2 2 0 1 1 0 4a2 2 0 0 1 0-4" clip-rule="evenodd"/><path d="M3.5 13a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1m15 0a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1M17 17a1 1 0 0 1 1.414 0l1.414 1.414a1 1 0 1 1-1.414 1.414L17 18.414A1 1 0 0 1 17 17M6 6a1 1 0 0 1 1.414 0l1.414 1.414a1 1 0 1 1-1.414 1.414L6 7.414A1 1 0 0 1 6 6m7 12.5a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1m0-15a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1M19.828 6a1 1 0 0 1 0 1.414l-1.414 1.414A1 1 0 1 1 17 7.414L18.414 6a1 1 0 0 1 1.414 0m-11 12.414l-1.414 1.414A1 1 0 1 1 6 18.414L7.414 17a1 1 0 0 1 1.414 1.414"/></g></mask></defs><circle cx="13" cy="13" r="13" fill="currentColor" mask="url(#pepiconsPopSunCircleFilled0)"/></g></svg>
                         </button>
                     </div>
             </div>
